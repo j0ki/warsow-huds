@@ -1,0 +1,147 @@
+if %HEALTH != #NOTSET
+	// === health ===
+	// draws the black border
+	setAlign #RIGHT, #BOTTOM
+	setColor 0, 0, 0, 0.3
+	setCursor 0.5 * #WIDTH, -0 + #HEIGHT
+	setSize 6 + 34 + 118 * 2, 6 + 32
+	drawPicByName $whiteimage
+
+	// draws the grey backdrop
+	setAlign #RIGHT, #BOTTOM
+	setColor 0.2, 0.2, 0.2, 0.3
+	setCursor -3 + -34 + 0.5 * #WIDTH, -3 + -0 + #HEIGHT
+	setSize 118 * 2, 32
+	drawPicByName $whiteimage
+
+	// draws the grey backdrop
+	setAlign #RIGHT, #BOTTOM
+	setColor 0.3, 0.3, 0.3, 0.3
+	setCursor -3 + -34 + 0.5 * #WIDTH, -3 + -0 + #HEIGHT
+	setSize 118, 32
+	drawPicByName $whiteimage
+
+	// draws the healthbar
+	setAlign #RIGHT, #BOTTOM
+	setColor 0, 1, 0, 1 // green
+	if %HEALTH > 50
+		setColor 1, 1, 0, 1 // yellow
+	endif
+	if %HEALTH == 100
+		setColor 1, 0.5, 0, 1 // orange
+	endif
+	if %HEALTH > 100
+		setColor 1, 0, 1, 1 // magenta
+	endif
+	setCursor -3 + -34 + 0.5 * #WIDTH, -3 + -0 + #HEIGHT
+	setSize 118 * 2, 32
+	drawBar %HEALTH * 0.5, 100
+
+	if %HEALTH
+		// draws the health number
+		setAlign #RIGHT, #BOTTOM
+		setColor 1, 1, 1, 1
+		setSize 26, 26
+		setCursor -6 + -34 + 0.5 * #WIDTH, -6 + -0 + #HEIGHT
+		drawNum %HEALTH
+
+		// draws the health icon
+		setRotationSpeed 0 1 0
+		setSize 30, 30
+		setAlign #RIGHT, #BOTTOM
+		setCursor -3 + 0.5 * #WIDTH, -5 + -0 + #HEIGHT
+		if %HEALTH > 100
+			drawPicByItemIndex #ITEM_MEGA_HEALTH
+		endif
+		if %HEALTH == 100
+			drawPicByItemIndex #ITEM_50_HEALTH
+		endif
+		if %HEALTH < 100
+			if %HEALTH > 50
+				drawPicByItemIndex #ITEM_25_HEALTH
+			endif
+		endif
+		if %HEALTH <= 50
+			drawPicByItemIndex #ITEM_5_HEALTH
+		endif
+
+		// optional clock for Mega Health spawn time
+		if %HEALTH >= 101
+		if %HEALTH <= 103
+			setColor 1 0 1 1 // magenta
+			// draws optional clock
+			setFont "clockfont_19"
+			setAlign #CENTER, #TOP
+			setCursor 400, 318
+			setSize 32 32
+			drawClock
+		endif
+		endif
+	endif
+
+	// === armor ===
+	// draws the black border
+	setAlign #LEFT, #BOTTOM
+	setColor 0, 0, 0, 0.3
+	setCursor 0.5 * #WIDTH, -0 + #HEIGHT
+	setSize 6 + 34 + 118 * 2, 6 + 32
+	drawPicByName $whiteimage
+
+	// draws the grey backdrop
+	setAlign #LEFT, #BOTTOM
+	setColor 0.2, 0.2, 0.2, 0.3
+	setCursor 3 + 34 + 0.5 * #WIDTH, -3 + -0 + #HEIGHT
+	setSize 118 * 2, 32
+	drawPicByName $whiteimage
+
+	// draws the grey backdrop
+	setAlign #LEFT, #BOTTOM
+	setColor 0.3, 0.3, 0.3, 0.3
+	setCursor 3 + 34 + 0.5 * #WIDTH, -3 + -0 + #HEIGHT
+	setSize 118, 32
+	drawPicByName $whiteimage
+
+	// draws the armorbar
+	setAlign #LEFT, #BOTTOM
+	setColor 0, 1, 0, 1 // green
+	if %ARMOR >= 100
+		setColor 1, 1, 0, 1 // yellow
+	endif
+	if %ARMOR >= 150
+		setColor 1, 0, 0, 1 // red
+	endif
+	setCursor 3 + 34 + 0.5 * #WIDTH, -3 + -0 + #HEIGHT
+	setSize 118 * 2, 32
+	drawBar %ARMOR * 0.5, 100
+
+	if %ARMOR
+		// draws the armor number
+		setAlign #LEFT, #BOTTOM
+		setColor 1, 1, 1, 1
+		setSize 26, 26
+		setCursor 6 + 34 + 0.5 * #WIDTH, -6 + -0 + #HEIGHT
+		drawNum %ARMOR
+
+		// draws the armor icon
+		setRotationSpeed 0 1 0
+		setSize 30, 30
+		setAlign #LEFT, #BOTTOM
+		setCursor 3 + 0.5 * #WIDTH, -5 + -0 + #HEIGHT
+		if %ARMOR < 50
+			drawPicByItemIndex #ITEM_ARMOR_SHARD
+		endif
+		if %ARMOR >= 50
+		if %ARMOR < 100
+			drawPicByItemIndex #ITEM_GREEN_ARMOR
+		endif
+		endif
+		if %ARMOR >= 100
+		if %ARMOR < 150
+			drawPicByItemIndex #ITEM_YELLOW_ARMOR
+		endif
+		endif
+		if %ARMOR >= 150
+			drawPicByItemIndex #ITEM_RED_ARMOR
+		endif
+	endif
+endif

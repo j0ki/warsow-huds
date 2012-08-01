@@ -1,0 +1,31 @@
+if %VIDWIDTH < 800
+	setFont "bitstream_9"
+endif
+if %VIDWIDTH >= 800
+	setFont "bitstream_10"
+endif
+
+setAlign 1 1
+setSize #WIDTH - 20 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 110
+setCursor 10 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 400
+if %CHASING != #NOTSET
+	moveCursor 0, -20
+endif
+
+if %CHAT_MODE > 0
+    setColor 0 0 0 1
+endif
+if %CHAT_MODE == 0
+    setColor 0 0 0 0
+endif
+
+drawChat 10 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 5, "gfx/2d/chat1"
+
+if %CHAT_MODE > 0
+	setSize 32 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 32
+	setCursor #WIDTH - 50 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 480
+	if %CHASING != #NOTSET
+		moveCursor 0, -20
+	endif
+	drawPicByName "gfx/2d/bubblechat"
+endif

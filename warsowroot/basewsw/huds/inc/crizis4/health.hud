@@ -1,0 +1,70 @@
+//draw health number
+if %HEALTH != #NOTSET
+
+	if %HEALTH < 1
+		setAlign #LEFT, #BOTTOM
+		setColor 1,1,1,0.9
+		setCursor 0, 580
+		setSize 325, 180
+		drawPicByName "gfx/hud/moviehud/1hp"
+	endif
+	
+	if %HEALTH > 1
+		if %HEALTH < 11
+			setAlign #LEFT, #BOTTOM
+			setColor 1,1,1,0.9
+			setCursor 0, 580
+			setSize 325, 180
+			drawPicByName "gfx/hud/moviehud/10hp"
+		endif
+	endif	
+	
+	if %HEALTH > 10
+		if %HEALTH < 31
+			setAlign #LEFT, #BOTTOM
+			setColor 1,1,1,0.9
+			setCursor 0, 580
+			setSize 325, 180
+			drawPicByName "gfx/hud/moviehud/30hp"
+		endif
+	endif		
+	
+	if %HEALTH > 30 
+		if %HEALTH < 51
+			setAlign #LEFT, #BOTTOM
+			setColor 1,1,1,0.9
+			setCursor 0, 580
+			setSize 325, 180
+			drawPicByName "gfx/hud/moviehud/50hp"
+		endif
+	endif		
+	
+	if %HEALTH > 50
+		if %HEALTH < 76
+			setAlign #LEFT, #BOTTOM
+			setColor 1,1,1,0.9
+			setCursor 0, 580
+			setSize 325, 180
+			drawPicByName "gfx/hud/moviehud/75hp"
+		endif
+	endif	
+		
+	if %HEALTH > 75
+		if %HEALTH < 91
+			setAlign #LEFT, #BOTTOM
+			setColor 1,1,1,0.9
+			setCursor 0, 580
+			setSize 325, 180
+			drawPicByName "gfx/hud/moviehud/90hp"
+		endif
+	endif			
+	
+	if %HEALTH > 90
+		setAlign #LEFT, #BOTTOM
+		setColor 1,1,1,0.9
+		setCursor 0, 580
+		setSize 325, 180
+		drawPicByName "gfx/hud/moviehud/100hp"
+	endif	
+	
+endif

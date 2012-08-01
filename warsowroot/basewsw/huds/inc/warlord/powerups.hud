@@ -1,0 +1,51 @@
+/*
+an adjusted default-hud powerups.hud
+
+seperated powerups for race to race.hud
+attention, its meant to draw over weapon_orb.hud so DONT call this part before including weapon_orb.hud
+*/
+if %RACE == 0
+	if %POWERUP_QUAD_TIME != 0
+		setColor 1, 0.95, 0.825, 0.9
+
+		setCursor 400, 554
+		setAlign #CENTER, #MIDDLE
+		setSize 64, 64
+		drawPicByItemIndex #ITEM_QUAD
+
+		setColor 1, 0.95, 0.825, 0.9
+		if %POWERUP_QUAD_TIME < 6
+			setColor 1, 0.85, 0.5, 0.9
+		endif
+		setCursor 412, 565
+		setSize 20, 26
+		drawNum %POWERUP_QUAD_TIME
+	endif
+
+	if %POWERUP_WARSHELL_TIME != 0
+		setAlign #CENTER, #MIDDLE
+		setColor 1, 0.95, 0.825, 0.9
+
+		setCursor 400, 554
+		setSize 64, 64
+		if %POWERUP_QUAD_TIME != 0
+			setAlign #LEFT, #BOTTOM
+			setCursor 595, 580
+			setSize 44, 44
+		endif
+		drawPicByItemIndex #ITEM_WARSHELL
+
+		setAlign #CENTER, #MIDDLE
+		setColor 1, 0.95, 0.825, 0.9
+		if %POWERUP_WARSHELL_TIME < 6
+			setColor 1, 0.85, 0.5, 0.9
+		endif
+		setCursor 412, 565
+		setSize 20, 26
+		if %POWERUP_QUAD_TIME != 0
+			setAlign #LEFT, #BOTTOM
+			setCursor 610, 580
+		endif
+		drawNum %POWERUP_WARSHELL_TIME
+	endif
+endif

@@ -1,0 +1,26 @@
+setAlign #CENTER, #BOTTOM
+setSize 32, 32
+
+setCursor 726, 255
+drawKeyState forward
+
+setCursor 726, 289
+drawKeyState backward
+
+setCursor 694, 289
+drawKeyState left
+
+setCursor 760, 289
+drawKeyState right
+
+setCursor 694, 255
+drawKeyState jump
+
+setCursor 760, 255
+drawKeyState special
+
+setCursor 760, 323
+drawKeyState fire
+
+setCursor 694, 323
+drawKeyState crouch

@@ -1,0 +1,110 @@
+setCursor #WIDTH / 2, 5
+setColor 1 1 1 1
+setFont virtue_28
+if %VIDHEIGHT >= 480
+moveCursor 0 2
+setFont virtue_10
+	if %VIDHEIGHT >= 600
+	moveCursor 0 1
+	setFont virtue_12
+		if %VIDHEIGHT >= 720
+		moveCursor 0 0
+		setFont virtue_16
+			if %VIDHEIGHT >= 768
+			moveCursor 0 1
+			setFont virtue_16
+				if %VIDHEIGHT >= 800
+				moveCursor 0 -4
+				setFont virtue_22
+					if %VIDHEIGHT >= 900
+					moveCursor 0 0
+					setFont virtue_22
+						if %VIDHEIGHT >= 960
+						moveCursor 0 1
+						setFont virtue_22
+							if %VIDHEIGHT >= 1024
+							moveCursor 0 2
+							setFont virtue_22
+								if %VIDHEIGHT >= 1050
+								moveCursor 0 1
+								setFont virtue_22
+									if %VIDHEIGHT >= 1080
+									moveCursor 0 0
+									setFont virtue_22
+										if %VIDHEIGHT >= 1200
+										moveCursor 0 -3
+										setFont virtue_28
+										endif
+									endif
+								endif
+							endif
+						endif
+					endif
+				endif
+			endif
+		endif
+	endif
+endif
+if %TEAM > 1 //don't show in dm n stuffz
+	setSize 32 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 32
+	setAlign 3 1
+	moveCursor -90 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, -6
+	setColor 0.9 0.7 0.2 1
+	if %TEAM == #TEAM_ALPHA
+		drawPicByName "gfx/hud/spec/cam"
+	endif
+	moveCursor -40 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 3
+	setColor 1 1 1 1
+	setColorAlpha 1
+	drawStatString 20
+	moveCursor 130 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 3
+
+	setAlign 1 1
+	moveCursor 90 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, -6
+	setColor 0.9 0.7 0.2 1
+	if %TEAM == #TEAM_BETA
+		drawPicByName "gfx/hud/spec/cam"
+	endif
+	moveCursor 40 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 3
+	setColor 1 1 1 1
+	setColorAlpha 1
+	drawStatString 21
+	moveCursor -130 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 3
+endif
+
+if %TEAM_ALPHA_SCORE != #NOTSET
+if %TEAM_BETA_SCORE != #NOTSET
+	setSize 24 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 24
+	setCursor #WIDTH / 2, 4
+	setAlign 3 1
+	moveCursor -14 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+	setColorToTeamColor #TEAM_ALPHA
+	setColorAlpha 0.65
+	drawNum %TEAM_ALPHA_SCORE
+	moveCursor 14 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+
+	setAlign 1 1
+	moveCursor 14 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+	setColorToTeamColor #TEAM_BETA
+	setColorAlpha 0.65
+	drawNum %TEAM_BETA_SCORE
+	moveCursor -14 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+
+	setAlign 2 1
+	if %TEAM_ALPHA_SCORE < %TEAM_BETA_SCORE
+		setColorToTeamColor #TEAM_BETA
+		setColorAlpha 0.65
+		drawPicByName gfx/hud/spec/lessthan
+	endif
+	if %TEAM_ALPHA_SCORE > %TEAM_BETA_SCORE
+		setColorToTeamColor #TEAM_ALPHA
+		setColorAlpha 0.65
+		drawPicByName gfx/hud/spec/greaterthan
+	endif
+	if %TEAM_ALPHA_SCORE == %TEAM_BETA_SCORE
+		setColor 1 1 0.6 1
+		setColorAlpha 0.65
+		drawPicByName gfx/hud/spec/equal
+	endif
+endif
+endif

@@ -1,0 +1,46 @@
+/*
+shows speed numbers on background image in the lower right corner
+
+- unsupported feature: alternative design for cg_showspeed 2, text only and more centered (like default.hud)
+*/
+
+if %SHOW_SPEED > 0													// enabled?
+	if %RACE	== 0															// there is a seperate part for speed numbers is in race.hud
+		if %HEALTH > 0													// do not show if zombiefied
+
+			setAlign #CENTER, #MIDDLE								// the graphic is put right bottom, but center.middle is needed for ups num
+
+			if %SHOW_SPEED != 2									// cg_showspeed 1 or anything not 2
+				setCursor #WIDTH - 21, #HEIGHT - 8
+				setSize 120, 30
+				setColor 1, 0.95, 0.825, 0.9
+				drawPicByName "gfx/hud/kuhjoe/speed1"		// background image
+
+				setSize 11, 13
+				setCursor #WIDTH - 24, #HEIGHT - 9
+				drawNum %SPEED + %SPEED_VERTICAL	// ups number
+			endif
+
+			if %SHOW_SPEED == 2									// cg_showspeed 2
+				setFont "virtue_10"						// adjusts fontsize to resolution
+				if %VIDHEIGHT >= 600
+					setFont "virtue_12"
+					if %VIDHEIGHT > 768
+						setFont "virtue_16"
+						if %VIDHEIGHT > 960
+							setFont "virtue_22"
+						endif
+					endif
+				endif
+				setColor 0, 0, 0, 0.9
+				setCursor 400, 401
+				drawStringNum %SPEED + %SPEED_VERTICAL	// ups number shadow
+
+				setColor 1, 0.95, 0.825, 0.8
+				setCursor 400, 400
+				drawStringNum %SPEED + %SPEED_VERTICAL	// ups number shine
+			endif
+
+		endif		// health?
+	endif			// !race
+endif				// showspeed?

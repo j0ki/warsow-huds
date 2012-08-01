@@ -1,0 +1,94 @@
+/*
+health numbers next to weapon-icon-orb-thingy. 
+
+- subtle damage taken flashes
+- low health warning
+- health pickup flashes
+- resolution friendly
+- seperate instagib design
+*/
+precache gfx/hud/kuhjoe/glow_left
+
+if %TEAM != #TEAM_SPECTATOR
+
+	// the health ui for NON INSTAGIB games follows up
+	if %INSTAGIB == 0
+
+		setAlign #CENTER, #MIDDLE
+		setColor 1, 0.95, 0.825, 0.9
+		setSize 128, 64
+		setCursor 336, 586
+
+		// health pickup flashes
+		if %PICKUP_ITEM
+			if %PICKUP_ITEM == #ITEM_MEGA_HEALTH 
+				setColor 1, 0.975, 0.925, 1
+			endif
+			if %PICKUP_ITEM == #ITEM_50_HEALTH 
+				setColor 1, 0.975, 0.925, 1
+			endif
+			if %PICKUP_ITEM == #ITEM_25_HEALTH 
+				setColor 1, 0.975, 0.925, 1
+			endif
+			if %PICKUP_ITEM == #ITEM_5_HEALTH 
+				setColor 1, 0.975, 0.925, 1
+			endif
+		endif
+		// damage recieved flash overrides pickup flash
+		if %DAMAGE_INDICATOR_LEFT && %DAMAGE_INDICATOR_RIGHT && %DAMAGE_INDICATOR_TOP && %DAMAGE_INDICATOR_BOTTOM > 0
+			setColor 0.88, 0.83, 0.68, 0.9
+		endif
+		drawPicByName "gfx/hud/kuhjoe/lower_left"		// background design image
+
+		// healthnumbers
+		// note: still shows them for dead players to let them know how much damage the last shot did
+		setSize 14, 20
+		setCursor 328, 576
+		setColor 1, 0.95, 0.825, 0.9
+		drawNum %HEALTH
+
+		// health warning and megahealth bar
+		setAlign #LEFT, #BOTTOM							// has to be done for drawpicbars alignment (using center might jump vertically!)
+		setCursor 272, 619
+		setSize 48, 65
+
+		// low and superlow health warning
+		if %HEALTH < 66
+			setColor 1, 0.9, 0, 0.4
+			if %HEALTH < 33
+				setColor 1, 0.1, 0, 0.5
+			endif
+			drawPicByName "gfx/hud/kuhjoe/glow_left"
+		endif
+
+		// the mega health bar in pink
+		if %HEALTH > 100
+			setColor 1, 0.1, 1, 0.5
+			drawPicBar %HEALTH * 4.44, 1000, "gfx/hud/kuhjoe/glow_left"		// do not wonder about the strange calculation, its neccesary because of the way the image is cut out (fat space at bottom)
+		endif
+
+	endif		// !insta
+	
+	// instagib health numbers and low warning
+	if %INSTAGIB != 0
+		if %HEALTH > 0 		// dont show health to dead players (instagib)
+		
+			// healthnumber with low warning (colorchange and sizeup)
+			setColor 1, 0.95, 0.825, 0.7
+			setSize 32, 40
+			setCursor 371, 570
+			setAlign #LEFT, #MIDDLE
+			if %HEALTH < 66
+				// health warning colors
+				setColor 1, 0.9, 0, 0.7
+				if %HEALTH < 33
+					setColor 1, 0.3, 0, 0.9
+					setSize 36, 46
+				endif
+			endif
+			drawNum %HEALTH
+
+		endif		// alive
+	endif			// insta
+
+endif				// !spec

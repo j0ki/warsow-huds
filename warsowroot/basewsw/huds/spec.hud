@@ -1,0 +1,39 @@
+setScale #DEFAULTSCALE
+
+/* misc shit */
+include spec/zoom
+include spec/damage_indicator_screen
+include crosshair
+
+/* bottom bar */
+if %MATCH_STATE < 4
+	if %TEAM != #TEAM_SPECTATOR
+		include spec/bar
+		include spec/bar_numbers
+		include spec/weaponlist
+	endif
+endif
+
+/* top bar */
+include spec/stunned
+include spec/bar_top
+include spec/scores
+include spec/clock
+setAlign 1 1
+setColor 1 1 1 0.2
+setCursor 0 0
+setSize #WIDTH 17
+drawPicByName gfx/hud/spec/top_gloss
+
+/* the rest of it */
+include spec/team_info
+include spec/team_image
+include spec/team_progress
+include spec/powerups
+include spec/awards
+include spec/chasing
+include spec/obituaries
+include spec/item_timers
+include spec/net
+include pointing
+include chat

@@ -1,0 +1,20 @@
+if %VIDWIDTH < 800
+	setFont "bitstream_9"
+endif
+if %VIDWIDTH >= 800
+	setFont "bitstream_10"
+endif
+
+setAlign 1 1
+setSize 250 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 185
+setCursor 70 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 300
+
+if %CHAT_MODE > 0
+	setColor 0 0 0 0.3
+endif
+if %CHAT_MODE == 0
+	setColor 0 0 0 0
+endif
+
+drawChat 4 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 3, "gfx/colors/white"
+setColor 1 1 1 1 // here cause bugs; don't remove

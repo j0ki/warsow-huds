@@ -1,0 +1,70 @@
+//draw health number
+if %ARMOR != #NOTSET
+
+	if %ARMOR < 26
+		setAlign #LEFT, #BOTTOM
+		setColor 1,1,1,0.9
+		setCursor 475, 580
+		setSize 325, 180
+		drawPicByName "gfx/hud/moviehud/noarmor"
+	endif
+	
+	if %ARMOR > 25
+		if %ARMOR < 51
+			setAlign #LEFT, #BOTTOM
+			setColor 1,1,1,0.9
+			setCursor 475, 580
+			setSize 325, 180
+			drawPicByName "gfx/hud/moviehud/10armor"
+		endif
+	endif	
+	
+	if %ARMOR > 50
+		if %ARMOR < 76
+			setAlign #LEFT, #BOTTOM
+			setColor 1,1,1,0.9
+			setCursor 475, 580
+			setSize 325, 180
+			drawPicByName "gfx/hud/moviehud/30armor"
+		endif
+	endif		
+	
+	if %ARMOR > 75 
+		if %ARMOR < 101
+			setAlign #LEFT, #BOTTOM
+			setColor 1,1,1,0.9
+			setCursor 475, 580
+			setSize 325, 180
+			drawPicByName "gfx/hud/moviehud/50armor"
+		endif
+	endif		
+	
+	if %ARMOR > 100
+		if %ARMOR < 126
+			setAlign #LEFT, #BOTTOM
+			setColor 1,1,1,0.9
+			setCursor 475, 580
+			setSize 325, 180
+			drawPicByName "gfx/hud/moviehud/75armor"
+		endif
+	endif	
+		
+	if %ARMOR > 125
+		if %ARMOR < 151
+			setAlign #LEFT, #BOTTOM
+			setColor 1,1,1,0.9
+			setCursor 475, 580
+			setSize 325, 180
+			drawPicByName "gfx/hud/moviehud/90armor"
+		endif
+	endif			
+	
+	if %ARMOR >= 150
+		setAlign #LEFT, #BOTTOM
+		setColor 1,1,1,0.9
+		setCursor 475, 580
+		setSize 325, 180
+		drawPicByName "gfx/hud/moviehud/100armor"
+	endif	
+	
+endif

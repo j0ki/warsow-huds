@@ -1,0 +1,61 @@
+if %SHOW_STRAFE != 0
+if %SPEED != #NOTSET
+
+	// acceleration
+	setCursor #WIDTH / 2, #HEIGHT / 2
+	setSize 400, 16
+	if %ACCELERATION >= 0
+		setColor 0, 1, 1, 0.5 
+		setAlign #LEFT, #BOTTOM
+		drawBar %ACCELERATION * 0.3333, 400
+	endif
+	if %ACCELERATION < 0
+		setColor 1, 0, 1, 0.5 
+		setAlign #RIGHT, #BOTTOM
+		drawBar 0 - %ACCELERATION * 0.3333, 400
+	endif
+	
+	setColor 1, 0, 0, 1
+	drawStringNum %ACCELERATION
+	
+	// difference in viewangle and moveangle
+	// DIFF_ANGLE
+	
+	// optimal angle (mirrored on both left+right sides)
+	// STRAFEANGLE
+	setColor 0, 1, 0, 0.5
+	setSize 400, 16
+	setCursor 400, 300 + 16
+	
+	// left bar
+	setAlign #RIGHT, #BOTTOM
+	drawBar %STRAFEANGLE * 0.04444, 400
+	
+	// right bar
+	setAlign #LEFT, #BOTTOM
+	drawBar %STRAFEANGLE * 0.04444, 400
+	
+	setColor 1, 0, 0, 1
+	drawStringNum %STRAFEANGLE
+	
+	// difference of viewangle and moving direction
+	if %SPEED >= 300
+		// DIFF_ANGLE gives -18000 - 18000 range
+		setColor 0, 0, 1, 0.5
+		setSize 400, 16
+		setCursor 400, 300 + 32
+		if %DIFF_ANGLE >= 0
+			setAlign #LEFT, #BOTTOM
+			drawBar %DIFF_ANGLE * 0.04444, 400
+		endif
+		if %DIFF_ANGLE < 0
+			setAlign #RIGHT, #BOTTOM
+			drawBar 0 - %DIFF_ANGLE * 0.04444, 400
+		endif
+
+		setColor 1, 0, 0, 1
+		drawStringNum %DIFF_ANGLE
+	endif
+	
+endif
+endif

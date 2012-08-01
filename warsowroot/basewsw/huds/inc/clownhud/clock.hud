@@ -1,0 +1,109 @@
+setAlign 2 2
+setFont "clockfont_35"
+if %VIDHEIGHT <= 1024
+	setFont "clockfont_23"
+	if %VIDHEIGHT < 720
+		setFont "clockfont_19"
+		if %VIDHEIGHT < 600
+			setFont "clockfont_11"
+		endif
+	endif
+endif
+
+setCursor #WIDTH / 2, 400
+if %TEAM == #TEAM_SPECTATOR
+	setAlign 1 1
+	setCursor 5 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 5
+endif
+
+setColor 1 1 1 1
+if %HEALTH > 100
+	setColor 1 0 1 1
+endif
+if %SHOW_PICKUP != 0
+	if %PICKUP_ITEM == #ITEM_RED_ARMOR
+		setColor 1 0 0 1 // red
+	endif
+	if %PICKUP_ITEM == #ITEM_YELLOW_ARMOR
+		setColor 1 1 0 1 // yellow
+	endif
+	if %PICKUP_ITEM == #ITEM_GREEN_ARMOR
+		setColor 0 1 0 1 // green
+	endif
+	if %PICKUP_ITEM == #ITEM_MEGA_HEALTH
+		setColor 1 0 1 1 // magenta
+	endif
+	if %PICKUP_ITEM == #ITEM_QUAD_DAMAGE
+		setColor 1 0.5 0 1 // orange
+	endif
+	if %PICKUP_ITEM == #ITEM_WARSHELL
+		setColor 0 1 1 1 // lightblue
+	endif
+endif
+drawClock
+moveCursor 0, -7
+if %TEAM == #TEAM_SPECTATOR
+	moveCursor 0, 35
+endif
+
+/* MATCH STATES */
+setFont "zerotwos24"
+if %VIDHEIGHT <= 1024
+	setFont "virtue_16"
+	if %VIDHEIGHT < 720
+		setFont "virtue_12"
+		if %VIDHEIGHT < 600
+			setFont "virtue_10"
+		endif
+	endif
+endif
+if %MATCH_STATE == #MATCH_STATE_WARMUP
+	setColor 1 1 1 0.5
+	drawString "Warmup"
+endif
+
+if %INDIVIDUAL
+	// Countdown
+	if %MATCH_STATE == #MATCH_STATE_COUNTDOWN
+		moveCursor -21, 0
+		setColor 1 1 1 1
+		if %MATCH_TIME < 3001
+			setColorAlpha 0.1
+			if %MATCH_TIME > 2000
+				setColorAlpha 0.1 + 0.001 * %MATCH_TIME - 2000
+			endif
+			drawString "3..."
+		endif
+		moveCursor 22, 0
+		if %MATCH_TIME < 2001
+			setColorAlpha 0.1
+			if %MATCH_TIME > 1000
+				setColorAlpha 0.1 + 0.001 * %MATCH_TIME - 1000
+			endif
+			drawString "2..."
+		endif
+		moveCursor 22, 0
+		if %MATCH_TIME < 1001
+			setColorAlpha 0.001 * %MATCH_TIME
+			drawString "1..."
+		endif
+		moveCursor -11, 0
+	endif
+
+	// Fast-fading Fight!
+	if %MATCH_STATE == #MATCH_STATE_PLAYTIME
+		if 500 > %MATCH_DURATION - %MATCH_TIME
+			setCursor 0.5 * #WIDTH, 380
+			setColor 1 0 0 1
+			setColorAlpha 1 - 0.002 * %MATCH_DURATION - %MATCH_TIME
+			if %OVERTIME == 0
+				drawString "FIGHT!"
+			endif
+			if %OVERTIME == 1
+				drawString "- OVERTIME -"
+			endif
+			moveCursor 0, 20
+		endif
+	endif
+
+endif //if %INDIVIDUAL

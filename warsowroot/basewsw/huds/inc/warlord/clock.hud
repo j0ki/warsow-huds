@@ -1,0 +1,98 @@
+/*
+- default.hud clock with armor pickup flash
+- WARMUP, OVERTIME, GET READY TO FIGHT matchstate hints
+*/
+
+if %RACE == 0
+	if %TEAM != #TEAM_SPECTATOR			// note: freeflying specs clock design and matchstate has been seperated to spectatorlogo.hud
+
+		// scale clock font to resolution
+		setAlign #CENTER, #MIDDLE
+		setFont "virtue_12"
+		if %VIDHEIGHT > 599
+			setFont "virtue_16"
+			if %VIDHEIGHT > 864
+				setFont "virtue_22"
+				if %VIDHEIGHT > 1024
+					setFont "virtue_28"
+				endif
+			endif
+		endif
+		
+		// draws the clock backdrop shadow
+		setColor 0, 0, 0, 1
+		setCursor 400, 63
+		drawClock
+		
+		// draws the clock fill
+		setColor 1, 0.95, 0.825, 0.9
+		if %INSTAGIB == 0
+			// change color according to item pickup
+			if %PICKUP_ITEM == #ITEM_RED_ARMOR			// Red Armor
+				setColor 1, 0, 0, 1 				// red
+			endif
+			if %PICKUP_ITEM == #ITEM_YELLOW_ARMOR	// Yellow Armor
+				setColor 1, 1, 0, 1 				// yellow
+			endif
+			if %PICKUP_ITEM == #ITEM_GREEN_ARMOR		// Green Armor
+				setColor 0, 1, 0, 1 				// green
+			endif
+			if %PICKUP_ITEM == #ITEM_MEGA_HEALTH		// Mega Health
+				setColor 1, 0, 1, 1 				// magenta
+			endif
+			if %PICKUP_ITEM == #ITEM_QUAD_DAMAGE		// Warshock (Damage X4)
+				setColor 1, 0.5, 0, 1 			// orange
+			endif
+			if %PICKUP_ITEM == #ITEM_WARSHELL				// Warshell (Damage 1/4)
+				setColor 0, 1, 1, 1 				// lightblue
+			endif
+		endif
+
+		setCursor 400, 62
+		drawClock
+
+		// matchstates
+		// overtime message
+		if %OVERTIME > 0
+			setFont "virtue_10"				//  up to 800x600
+			if %VIDHEIGHT > 600
+				setFont "virtue_12"			// 960x720 to 1280x960
+				if %VIDHEIGHT > 960
+					setFont "virtue_16"			// 1280x1024 or higher
+				endif
+			endif
+			setCursor 400, 41
+			setColor 0.8, 1, 0, 0.6
+			drawString "OVERTIME"
+		endif
+
+		// draws warmup
+		if %MATCH_STATE == #MATCH_STATE_WARMUP
+			setFont "virtue_10"
+			if %VIDHEIGHT > 600
+				setFont "virtue_12"
+				if %VIDHEIGHT > 960
+					setFont "virtue_16"
+				endif
+			endif
+			setCursor 400, 41
+			setColor 0.8, 1, 0, 0.6
+			drawString "WARMUP"
+		endif
+
+		// draws match starting hint
+		if %MATCH_STATE == #MATCH_STATE_COUNTDOWN
+			setFont "virtue_12"
+			if %VIDHEIGHT > 600
+				setFont "virtue_16"
+				if %VIDHEIGHT > 960
+					setFont "virtue_22"
+				endif
+			endif
+			setCursor 400, 41
+			setColor 1, 0.95, 0.825, 0.9
+			drawString "GET READY TO FIGHT"
+		endif
+
+	endif		// !spec
+endif			// !race

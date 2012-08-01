@@ -1,0 +1,27 @@
+if %WEAPON_ITEM == #WEAP_GUNBLADE
+	if %AMMO
+		setCursor 400, 355
+		setAlign 1 2
+		setColor .2 .2 .2 .3
+		moveCursor -45 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		setSize 90 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 4
+		if %AMMO > 9
+			setColor .70 .66 .14 1
+		endif
+		drawPicByName "$whiteimage"
+
+		setColor .70 .66 .14 .7
+		setSize 28 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 4
+		if %AMMO > 4
+			drawPicByName "$whiteimage"
+		endif
+		if %AMMO > 6
+			moveCursor 31 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawPicByName "$whiteimage"
+		endif
+		if %AMMO > 8
+			moveCursor 31 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawPicByName "$whiteimage"
+		endif
+	endif
+endif

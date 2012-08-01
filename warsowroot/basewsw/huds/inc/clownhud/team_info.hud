@@ -1,0 +1,20 @@
+drawTeamMates
+
+if %VIDHEIGHT >= 768
+	setFont "virtue_12"
+endif
+if %VIDHEIGHT < 768
+	if %VIDHEIGHT >= 600
+		setFont "virtue_9"
+	endif
+	if %VIDHEIGHT < 600
+		setFont "virtue_8"
+	endif
+endif
+setColor 1 1 1 0.7
+setCursor 0, #HEIGHT
+if %DOWNLOAD_IN_PROGRESS
+	moveCursor 0, -28
+endif
+setAlign 1 3
+drawTeamInfo

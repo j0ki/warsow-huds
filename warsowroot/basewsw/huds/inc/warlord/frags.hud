@@ -1,0 +1,133 @@
+/*
+frag counter for all gametypes
+note: spread for real teamgame scores is drawn in scores.hud. the players indivdual are frags still here tho
+
+- shows spread instead of "Points" in %INDIVIDUAL type games (duel / da)
+*/
+if %RACE == 0										// skip if we do not race
+	if %SCORE != #NOTSET
+
+		setFont "virtue_10"		// adjusts fontsize to resolution
+		if %VIDHEIGHT >= 600					// notice that its vidheight
+			setFont "virtue_12"
+			if %VIDHEIGHT > 768
+				setFont "virtue_16"
+				if %VIDHEIGHT > 960
+					setFont "virtue_22"
+				endif
+			endif
+		endif
+
+		// frag count shadow
+		setAlign #RIGHT, #MIDDLE
+		setCursor 47, #HEIGHT - 32
+		setColor 0, 0, 0, 1
+		
+		if %INDIVIDUAL == 0						// not for duel / da
+			if %SCORE == 0
+				drawString "No"						// no frags, no hits, no points etc
+			endif
+			if %SCORE != 0
+				drawStringNum %SCORE		// 1 frag, 333 points etc
+			endif
+		
+			// frag count bright text
+			setCursor 47, #HEIGHT - 33
+			setColor 1, 0.95, 0.825, 0.9
+		
+			if %SCORE == 0
+				drawString "No"						// no frags, no hits, no points etc
+			endif
+			if %SCORE != 0
+				drawStringNum %SCORE		// 1 frag, 333 points etc
+			endif
+		endif
+
+		// "frags" text strings comming up
+		setAlign #LEFT, #MIDDLE
+		setColor 0, 0, 0, 1
+		setCursor 50, #HEIGHT - 32
+
+		// TDM, CA, CTF and DM show fragcounter
+		if %INDIVIDUAL == 0				// not duel / da
+
+			// this is insane, sry :P
+			if %SCORE > 0
+				if %SCORE == 1
+					drawString "Point"
+				endif
+				if %SCORE != 1			// can not be -1 here
+					drawString "Points"
+				endif
+			endif
+			if %SCORE <= 0
+				if %SCORE == -1
+					drawString "Point"
+				endif
+				if %SCORE != -1			// cant be +1 here
+					drawString "Points"
+				endif
+			endif
+			setCursor 50, #HEIGHT - 33
+			setColor 1, 0.95, 0.825, 0.9
+			if %SCORE > 0
+				if %SCORE == 1
+					drawString "Point"
+				endif
+				if %SCORE != 1			// can not be -1 here
+					drawString "Points"
+				endif
+			endif
+			if %SCORE <= 0
+				if %SCORE == -1
+					drawString "Point"
+				endif
+				if %SCORE != -1			// cant be +1 here
+					drawString "Points"
+				endif
+			endif
+			
+		endif					// !duel / da
+
+		// DUEL shows spread (difference in score between the 2 players)
+		// Code stolen from kro! props to him ;D \o/
+		if %INDIVIDUAL
+		
+			// shadow
+			setAlign #LEFT, #MIDDLE
+			setColor 0, 0, 0, 1
+			setCursor 103, #HEIGHT - 32
+			if %TEAM == #TEAM_ALPHA
+				drawStringNum %TEAM_ALPHA_SCORE - %TEAM_BETA_SCORE
+			endif
+			if %TEAM == #TEAM_BETA
+				drawStringNum %TEAM_BETA_SCORE - %TEAM_ALPHA_SCORE
+			endif
+
+		// spread number bright text
+			setCursor 103, #HEIGHT - 33
+			setColor 1, 0.95, 0.825, 0.9
+
+			// DUEL shows spread (difference in score between the 2 players)
+			// Code stolen from kro! props to him ;D \o/
+			if %TEAM == #TEAM_ALPHA
+				drawStringNum %TEAM_ALPHA_SCORE - %TEAM_BETA_SCORE
+			endif
+			if %TEAM == #TEAM_BETA
+				drawStringNum %TEAM_BETA_SCORE - %TEAM_ALPHA_SCORE
+			endif
+
+			// "spread" text
+			setAlign #RIGHT, #MIDDLE
+			setCursor 100, #HEIGHT - 32
+			setColor 0, 0, 0, 1
+			drawString "Spread:"
+
+			setColor 1, 0.95, 0.825, 0.9
+			setCursor 100, #HEIGHT - 33
+			drawString "Spread:"
+		
+		endif							// duel / da
+
+	endif								// !score
+endif									// racers dont frag

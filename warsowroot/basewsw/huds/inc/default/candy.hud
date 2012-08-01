@@ -1,0 +1,93 @@
+// Top score/clock background
+setAlign 2 1
+setColor 1 1 1 0.6
+setCursor #WIDTH / 2, 0
+setSize 395 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 40
+if %TEAM > 1 //if not #TEAM_PLAYER or #TEAM_SPECTATOR
+	setColorToTeamColor %TEAM
+endif
+setColorAlpha 0.6
+drawPicByName "gfx/hud/default/top_bar"
+
+
+//Bottom numbers/weaponslist background
+if %TEAM != #TEAM_SPECTATOR
+
+setAlign 1 3
+setColor 1 1 1 0.2
+if %TEAM > 1 //if not #TEAM_PLAYER or #TEAM_SPECTATOR
+	setColorToTeamColor %TEAM
+endif
+setColorAlpha 0.2
+setCursor 0, #HEIGHT - 2
+
+// Don't fucking touch this.
+// 8:8 base number = 253, 68.5 increment
+// 253 + ((8 - ((height / width) * 8)) * 68.5)
+/*setSize 253 + 68.5 * 8 - 8 * %VIDHEIGHT / %VIDWIDTH, 26
+
+moveCursor 280 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, -25
+drawPicByName gfx/colors/white
+moveCursor -280 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 25*/
+setSize #WIDTH, 26
+moveCursor 0, -25
+setColor 1 1 1 0.6
+if %TEAM > 1 //if not #TEAM_PLAYER or #TEAM_SPECTATOR
+	setColorToTeamColor %TEAM
+endif
+setColorAlpha 0.6
+drawPicByName gfx/colors/white
+moveCursor 0, 25
+
+
+
+setColor 1 1 1 1
+setSize 280 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 73
+drawPicByName gfx/hud/default/hp_bar
+if %TEAM > 1 //if not #TEAM_PLAYER or #TEAM_SPECTATOR
+	setColorToTeamColor %TEAM
+endif
+setColorAlpha 0.8
+drawPicByName gfx/hud/default/hp_bar
+
+setAlign 3 3
+setColor 1 1 1 1
+moveCursor #WIDTH 0
+setSize 130 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 73
+drawPicByName gfx/hud/default/ammo_bar
+if %TEAM > 1 //if not #TEAM_PLAYER or #TEAM_SPECTATOR
+	setColorToTeamColor %TEAM
+endif
+setColorAlpha 0.8
+drawPicByName gfx/hud/default/ammo_bar
+
+endif //if %TEAM != #TEAM_SPECTATOR
+
+/*
+setAlign 1 2
+setCursor 0, #HEIGHT / 2
+
+setColor 255 0 0 0.8
+
+// 640000 / %VIDWIDTH
+//    4:3 = 400
+//    8:5 = 333.333333
+setSize 400 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 100
+drawPicByName gfx/colors/white
+moveCursor 400 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0  //most position to the end of red box
+
+// This needs to be 300 at 8:5, or 200 at 4:3
+setColor 0 255 0 0.8
+setSize 800 - 800 * %VIDHEIGHT / %VIDWIDTH, 100    // ???????????????????????????????????
+drawPicByName gfx/colors/white
+
+setAlign 3 2
+setCursor #WIDTH, #HEIGHT / 2
+setColor 0 0 255 0.8
+
+// 640000 / %VIDWIDTH
+//    4:3 = 200
+//    8:5 = 166.666667
+setSize 200 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 100
+drawPicByName gfx/colors/white
+*/

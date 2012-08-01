@@ -1,0 +1,59 @@
+// this is just the default.hud damage indicator wicth adjusted stunned print
+precache gfx/hud/danlin/damage_down
+precache gfx/hud/danlin/damage_left
+precache gfx/hud/danlin/damage_right
+precache gfx/hud/danlin/damage_up
+
+setAlign #CENTER, #MIDDLE
+
+if %STUNNED
+	setColor 1, 0, 0, 1
+	setCursor 400, 84
+	setFont "virtue_22"
+	if %VIDHEIGHT <= 1024
+		setFont "electrofield_20"
+		if %VIDHEIGHT <= 960
+			setFont "electrofield_18"
+			setCursor 400, 85
+			if %VIDHEIGHT <= 768
+				setFont "electrofield_16"
+				if %VIDHEIGHT <= 600
+					setFont "virtue_12"
+					setCursor 400, 86
+				endif
+			endif
+		endif
+	endif
+	drawString "STUNNED"
+endif
+
+setAlign #TOP, #LEFT
+setColor 1, 1, 1, 1
+
+if %DAMAGE_INDICATOR_LEFT > 0
+	setColorAlpha %DAMAGE_INDICATOR_LEFT / 1000
+	setCursor 0, 0
+	setSize #WIDTH / 4, #HEIGHT
+	drawPicByName "gfx/hud/danlin/damage_left"
+endif
+
+if %DAMAGE_INDICATOR_RIGHT > 0
+	setColorAlpha %DAMAGE_INDICATOR_RIGHT / 1000
+	setCursor #WIDTH - #WIDTH / 4, 0
+	setSize #WIDTH / 4, #HEIGHT
+	drawPicByName "gfx/hud/danlin/damage_right"
+endif
+
+if %DAMAGE_INDICATOR_TOP > 0
+	setColorAlpha %DAMAGE_INDICATOR_TOP / 1000
+	setCursor 0, 0
+	setSize #WIDTH, #HEIGHT / 4
+	drawPicByName "gfx/hud/danlin/damage_up"
+endif
+
+if %DAMAGE_INDICATOR_BOTTOM > 0
+	setColorAlpha %DAMAGE_INDICATOR_BOTTOM / 1000
+	setCursor 0, #HEIGHT - #HEIGHT / 4
+	setSize #WIDTH, #HEIGHT / 4
+	drawPicByName "gfx/hud/danlin/damage_down"
+endif

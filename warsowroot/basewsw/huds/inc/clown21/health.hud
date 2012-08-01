@@ -1,0 +1,41 @@
+if %RACE == 0
+	setColor 1 1 1 1
+	setSize 42 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 42
+	setAlign 3 3
+	setCursor #WIDTH / 2, 595
+	moveCursor -7 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+	if %HEALTH != #NOTSET
+		if %HEALTH > 100
+			setColor 1 0 1 1
+			drawPicByName gfx/hud/clown21/health/white_lowres
+		endif
+		if %HEALTH == 100
+			setColor 0 0.6 1 1
+			drawPicByName gfx/hud/clown21/health/white_lowres
+		endif
+		if %HEALTH < 100
+			if %HEALTH >= 75
+				setColor 1 1 1 1
+				drawPicByName gfx/hud/clown21/health/white_lowres
+			endif
+		endif
+		if %HEALTH < 75
+			if %HEALTH >= 50
+				setColor 1 1 0 1
+				drawPicByName gfx/hud/clown21/health/white_lowres
+			endif
+		endif
+		if %HEALTH < 50
+			if %HEALTH >= 25
+				setColor 1 0.5 0 1
+				drawPicByName gfx/hud/clown21/health/white_lowres
+			endif
+		endif
+		if %HEALTH < 25
+			setColor 0.85 0.05 0.05 1
+			drawPicByName gfx/hud/clown21/health/white_lowres
+		endif
+		moveCursor -47 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		drawNum %HEALTH
+	endif
+endif

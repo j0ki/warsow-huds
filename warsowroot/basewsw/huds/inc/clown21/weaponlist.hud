@@ -1,0 +1,117 @@
+if %WEAPON_ITEM
+	setAlign 2 3
+		setCustomWeaponSelect gfx/hud/clown21/blank
+
+		// draw selected weapon symbol
+		setCustomWeaponIcons #ITEM_GUNBLADE 1 gfx/hud/clown21/blank
+		setCustomWeaponIcons #ITEM_MACHINEGUN 1 gfx/hud/clown21/blank
+		setCustomWeaponIcons #ITEM_RIOTGUN 1 gfx/hud/clown21/blank
+		setCustomWeaponIcons #ITEM_GRENADE_LAUNCHER 1 gfx/hud/clown21/blank
+		setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 1 gfx/hud/clown21/blank
+		setCustomWeaponIcons #ITEM_PLASMAGUN 1 gfx/hud/clown21/blank
+		setCustomWeaponIcons #ITEM_LASERGUN 1 gfx/hud/clown21/blank
+		setCustomWeaponIcons #ITEM_ELECTROBOLT 1 gfx/hud/clown21/blank
+
+		setCustomWeaponIcons #ITEM_GUNBLADE 0 gfx/hud/clown21/blank
+		setCustomWeaponIcons #ITEM_MACHINEGUN 0 gfx/hud/clown21/blank
+		setCustomWeaponIcons #ITEM_RIOTGUN 0 gfx/hud/clown21/blank
+		setCustomWeaponIcons #ITEM_GRENADE_LAUNCHER 0 gfx/hud/clown21/blank
+		setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 0 gfx/hud/clown21/blank
+		setCustomWeaponIcons #ITEM_PLASMAGUN 0 gfx/hud/clown21/blank
+		setCustomWeaponIcons #ITEM_LASERGUN 0 gfx/hud/clown21/blank
+		setCustomWeaponIcons #ITEM_ELECTROBOLT 0 gfx/hud/clown21/blank
+		if %PENDING_WEAPON == #ITEM_GUNBLADE
+			setCustomWeaponIcons #ITEM_GUNBLADE 1 gfx/hud/clown21/selected
+		endif
+		if %PENDING_WEAPON == #ITEM_MACHINEGUN
+			setCustomWeaponIcons #ITEM_MACHINEGUN 1 gfx/hud/clown21/selected
+		endif
+		if %PENDING_WEAPON == #ITEM_RIOTGUN
+			setCustomWeaponIcons #ITEM_RIOTGUN 1 gfx/hud/clown21/selected
+		endif
+		if %PENDING_WEAPON == #ITEM_GRENADE_LAUNCHER
+			setCustomWeaponIcons #ITEM_GRENADE_LAUNCHER 1 gfx/hud/clown21/selected
+		endif
+		if %PENDING_WEAPON == #ITEM_ROCKET_LAUNCHER
+			setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 1 gfx/hud/clown21/selected
+		endif
+		if %PENDING_WEAPON == #ITEM_PLASMAGUN
+			setCustomWeaponIcons #ITEM_PLASMAGUN 1 gfx/hud/clown21/selected
+		endif
+		if %PENDING_WEAPON == #ITEM_LASERGUN
+			setCustomWeaponIcons #ITEM_LASERGUN 1 gfx/hud/clown21/selected
+		endif
+		if %PENDING_WEAPON == #ITEM_ELECTROBOLT
+			setCustomWeaponIcons #ITEM_ELECTROBOLT 1 gfx/hud/clown21/selected
+		endif
+
+		setCursor 0.5 * #WIDTH + 46 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 545
+		drawWeaponIcons 46 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0, 42 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 42
+
+		//Draws custom icons for weaponlist. 
+		setCustomWeaponIcons #ITEM_GUNBLADE 1 gfx/hud/clown21/weapon/gunblade
+		setCustomWeaponIcons #ITEM_MACHINEGUN 1 gfx/hud/clown21/weapon/machinegun
+		setCustomWeaponIcons #ITEM_RIOTGUN 1 gfx/hud/clown21/weapon/riot
+		setCustomWeaponIcons #ITEM_GRENADE_LAUNCHER 1 gfx/hud/clown21/weapon/grenade
+		setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 1 gfx/hud/clown21/weapon/rocket
+		setCustomWeaponIcons #ITEM_PLASMAGUN 1 gfx/hud/clown21/weapon/plasma
+		setCustomWeaponIcons #ITEM_LASERGUN 1 gfx/hud/clown21/weapon/laser
+		setCustomWeaponIcons #ITEM_ELECTROBOLT 1 gfx/hud/clown21/weapon/electro
+
+		setCustomWeaponIcons #ITEM_GUNBLADE 0 gfx/hud/clown21/weapon/gunblade_nogun
+		setCustomWeaponIcons #ITEM_MACHINEGUN 0 gfx/hud/clown21/weapon/machinegun_nogun
+		setCustomWeaponIcons #ITEM_RIOTGUN 0 gfx/hud/clown21/weapon/riot_nogun
+		setCustomWeaponIcons #ITEM_GRENADE_LAUNCHER 0 gfx/hud/clown21/weapon/grenade_nogun
+		setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 0 gfx/hud/clown21/weapon/rocket_nogun
+		setCustomWeaponIcons #ITEM_PLASMAGUN 0 gfx/hud/clown21/weapon/plasma_nogun
+		setCustomWeaponIcons #ITEM_LASERGUN 0 gfx/hud/clown21/weapon/laser_nogun
+		setCustomWeaponIcons #ITEM_ELECTROBOLT 0 gfx/hud/clown21/weapon/electro_nogun
+
+		setCursor 0.5 * #WIDTH + 46 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 545
+		drawWeaponIcons 46 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0, 42 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 42
+
+		moveCursor 0 -43
+		drawWeaponStrongAmmo 46 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0, 11
+
+		// Draws + in weaponlist when ammo is picked up.
+		setCustomWeaponIcons #ITEM_GUNBLADE 1 gfx/hud/clown21/blank
+		setCustomWeaponIcons #ITEM_MACHINEGUN 1 gfx/hud/clown21/blank
+		setCustomWeaponIcons #ITEM_RIOTGUN 1 gfx/hud/clown21/blank
+		setCustomWeaponIcons #ITEM_GRENADE_LAUNCHER 1 gfx/hud/clown21/blank
+		setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 1 gfx/hud/clown21/blank
+		setCustomWeaponIcons #ITEM_PLASMAGUN 1 gfx/hud/clown21/blank
+		setCustomWeaponIcons #ITEM_LASERGUN 1 gfx/hud/clown21/blank
+		setCustomWeaponIcons #ITEM_ELECTROBOLT 1 gfx/hud/clown21/blank
+
+		// Draws second selected weapon to pz opacity
+		if %PENDING_WEAPON == #ITEM_GUNBLADE
+			setCustomWeaponIcons #ITEM_GUNBLADE 1 gfx/hud/clown21/weapon/gunblade
+		endif
+		if %PENDING_WEAPON == #ITEM_MACHINEGUN
+			setCustomWeaponIcons #ITEM_MACHINEGUN 1 gfx/hud/clown21/weapon/machinegun
+		endif
+		if %PENDING_WEAPON == #ITEM_RIOTGUN
+			setCustomWeaponIcons #ITEM_RIOTGUN 1 gfx/hud/clown21/weapon/riot
+		endif
+		if %PENDING_WEAPON == #ITEM_GRENADE_LAUNCHER
+			setCustomWeaponIcons #ITEM_GRENADE_LAUNCHER 1 gfx/hud/clown21/weapon/grenade
+		endif
+		if %PENDING_WEAPON == #ITEM_ROCKET_LAUNCHER
+			setCustomWeaponIcons #ITEM_ROCKET_LAUNCHER 1 gfx/hud/clown21/weapon/rocket
+		endif
+		if %PENDING_WEAPON == #ITEM_PLASMAGUN
+			setCustomWeaponIcons #ITEM_PLASMAGUN 1 gfx/hud/clown21/weapon/plasma
+		endif
+		if %PENDING_WEAPON == #ITEM_LASERGUN
+			setCustomWeaponIcons #ITEM_LASERGUN 1 gfx/hud/clown21/weapon/laser
+		endif
+		if %PENDING_WEAPON == #ITEM_ELECTROBOLT
+			setCustomWeaponIcons #ITEM_ELECTROBOLT 1 gfx/hud/clown21/weapon/electro
+		endif
+
+		setCursor 0.5 * #WIDTH + 46 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 545
+		drawWeaponIcons 46 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0, 42 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 42
+		drawWeaponIcons 46 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0, 42 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 42
+		drawWeaponIcons 46 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0, 42 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 42
+		drawWeaponIcons 46 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0, 42 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 42
+endif

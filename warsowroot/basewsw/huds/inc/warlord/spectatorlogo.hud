@@ -1,0 +1,121 @@
+/*
+- draws wsw logo while freeflying
+- shows clock
+- uses a different design for instagib
+- shows matchstate
+*/ 
+
+if %TEAM == #TEAM_SPECTATOR										// freeflying spectator mode
+
+	setAlign #LEFT, #TOP
+		
+	// underlying stripes
+	// instagib design bar
+	if %INSTAGIB != 0
+		
+		// instagib colored bar, glow image
+		setCursor 0, 538
+		setSize 800, 52
+		drawPicByName "textures/supersymmetry/neon_02"
+
+		// yes it draws another time over itself -> less transparent
+		setCursor 0, 563
+		setSize 800, 52
+		drawPicByName "textures/supersymmetry/neon_02"
+
+		// instagib colored bar
+		setColor 0, 1, 1, 0.4
+		setCursor 0, 567
+		setSize 800, 20
+		drawPicByName "$whiteimage"
+			
+	endif
+
+	// non insta design bar
+	if %INSTAGIB == 0
+
+		// bar
+		setCursor 0, 564
+		setSize 800, 26
+		drawPicByName "textures/supersymmetry/ledge_02"
+
+		endif
+
+	// mainpart, logo with enleghtment
+	setCursor 0, 538
+	setSize 800, 10
+	setColor 0.956, 0.466, 0.129, 0.5						// background in wsw logo color
+	drawBar 1, 1
+	
+	setColor 1, 1, 1, 1
+	setCursor 0, 543
+	setSize 512, 384
+	drawPicByName "gfx/ui/logo512"						// actual logo
+
+	// overlaying bar image
+	setCursor 500, 543
+	setSize 512, 384
+	setColorAlpha 1
+	drawPicByName "gfx/hud/kuhjoe/logo512_bar"	// logo enleght bar
+
+	// show match-time (clock)
+	setFont "virtue_10"
+	if %VIDHEIGHT > 600
+		setFont "virtue_12"
+		if %VIDHEIGHT > 768
+			setFont "virtue_16"
+			if %VIDHEIGHT > 1024
+				setFont "virtue_22"
+			endif
+		endif
+	endif
+
+	setAlign #RIGHT, #MIDDLE
+	setCursor #WIDTH - 10 , #HEIGHT - 23
+	setColor 1, 1, 1, 0.7
+	drawClock
+
+	// matchstates
+	setAlign #LEFT, #MIDDLE
+		
+	// text shadow
+	setColor 0, 0, 0, 0.7
+	setCursor 390, #HEIGHT - 22
+
+	// hint: a game is already running
+	if %MATCH_STATE == #MATCH_STATE_PLAYTIME
+
+		drawString "MATCH IN PROGRESS"
+	
+		// text fill
+		setColor 1, 1, 1, 0.7
+		setCursor 390, #HEIGHT - 23
+		drawString "MATCH IN PROGRESS"
+	
+	endif
+
+	// hint: match is in warmup phase
+	if %MATCH_STATE == #MATCH_STATE_WARMUP
+
+		drawString "WARMUP PHASE"
+	
+		// text fill
+		setColor 1, 1, 1, 0.7
+		setCursor 390, #HEIGHT - 23
+		drawString "WARMUP PHASE"
+	
+	endif
+
+	// hint: the game is about to start
+	if %MATCH_STATE == #MATCH_STATE_COUNTDOWN
+
+		drawString "ROUND IS STARTING"
+	
+		// text fill
+		setColor 1, 1, 1, 0.7
+		setCursor 390, #HEIGHT - 23
+		drawString "ROUND IS STARTING"
+	
+	endif
+
+endif		// is spec

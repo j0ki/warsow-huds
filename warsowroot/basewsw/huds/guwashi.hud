@@ -1,0 +1,42 @@
+/*
+Guwashi Hud
+-- Guwashi (guwashi999 at gmail dot com)
+*/
+
+setFont con_fontSystemsmall
+setScale #DEFAULTSCALE
+if %MATCH_STATE < 4
+include default/damage_indicator_screen
+include default/crosshair
+if %RACE == 0
+//include default/candy	// Comment out if you don't like plates and other dishware.
+include guwashi/health_armor
+include guwashi/weaponlist
+//include default/ammo
+include guwashi/scores
+include guwashi/clock
+include default/ammo_warning
+include default/stunned
+include default/obituaries
+include default/powerups
+include default/team_info
+include default/team_image
+include default/team_message
+include default/team_progress
+include default/minimap
+include default/item_timers
+endif //if %RACE == 0
+include default/strafe
+include guwashi/speed
+include default/fps
+include default/chasing
+include default/awards
+include default/download
+include default/net
+include default/pointing
+include default/keystate
+/* Race */
+setCursor 250, 470
+include default/race_records
+endif //if %MATCH_STATE < 4
+include default/chat

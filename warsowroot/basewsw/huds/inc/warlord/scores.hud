@@ -1,0 +1,246 @@
+/*
+teamscores aka "leet o meter", shows how well you do against the enemy with a bar and also shows the score difference in numbers
+
+how it works:
+draws a bar in size of ownscore in realation to the sum of both team scores
+
+what makes it complicated:
+neagtive scores / frags
+
+- leet-o-meter for players/chase and default style teamscores for freefying specs
+*/
+
+if %TEAM_ALPHA_SCORE != #NOTSET 									// check if there are alpha and beta team scores
+	if %TEAM_BETA_SCORE != #NOTSET
+
+		if %TEAM != #TEAM_SPECTATOR									// scores are not displayed for freeflight but for chase
+			if %INDIVIDUAL == 0														// only for real team games, excludes duel / da (DO NOT USE %TEAMBASED HERE!)
+
+				// fontscaling for spread number ( i dont use drawnum for this to be able to put out "is equal" instead of spread 0)
+				setFont "bitstream_8"
+				if %VIDWIDTH > 800
+					setFont "virtue_10"
+					if %VIDWIDTH >= 1280
+						setFont "virtue_12"
+						if %VIDWIDTH >= 1600
+							setFont "virtue_16"
+						endif
+					endif
+				endif
+				setAlign #LEFT, #MIDDLE
+
+				// dark background box
+				setCursor 289, 12.4
+				setSize 222, 21.3
+				setColor 0, 0.025, 0.085, 0.4
+				drawBar 1, 1
+
+				// score bar constructor
+				setCursor 291, 12
+				setSize 218, 17
+				setColorToTeamColor %TEAM
+				setColorAlpha 0.6
+
+				// alphateam scorebar
+				if %TEAM == #TEAM_ALPHA
+
+					// bar drawing for neagtive frags
+					if %TEAM_ALPHA_SCORE <= 0
+						// both teams have a negative score
+						if %TEAM_BETA_SCORE <= 0
+
+							drawBar %TEAM_BETA_SCORE * -1, -1 * %TEAM_ALPHA_SCORE + %TEAM_BETA_SCORE
+							setCursor 291, 11
+							setSize 218, 15
+							drawBar %TEAM_BETA_SCORE * -1, -1 * %TEAM_ALPHA_SCORE + %TEAM_BETA_SCORE
+
+						endif
+					// if only your team has a negative score a bar must not be drawn
+					endif
+
+					// bar drawing for positive frags (team alpha)
+					if %TEAM_ALPHA_SCORE > 0
+						// enemy managed to get negative score, draw full bar ;)
+						if %TEAM_BETA_SCORE < 0
+
+							drawBar 1, 1
+							setCursor 291, 11
+							setSize 218, 15
+							drawBar 1, 1
+
+						endif
+						// enemy has some score or zero, draw a bar in proportion to scores
+						if %TEAM_BETA_SCORE >= 0
+
+							drawBar %TEAM_ALPHA_SCORE, %TEAM_ALPHA_SCORE + %TEAM_BETA_SCORE
+							setCursor 291, 11
+							setSize 218, 15
+							drawBar %TEAM_ALPHA_SCORE, %TEAM_ALPHA_SCORE + %TEAM_BETA_SCORE
+
+						endif
+					endif
+
+					// own score number
+					setCursor 305, 12
+					setSize 13, 15
+					setColor 1, 0.95, 0.825, 0.9
+					
+					if %TEAM_ALPHA_SCORE < 1
+						if %TEAM_BETA_SCORE >= %TEAM_ALPHA_SCORE	// showing score number in teamcolor for games with score 0:0 (helps realising what teamcolor you are before start of a game)
+							if %TEAM_BETA_SCORE >= 0				// this avoids: "negative frags are teamcolored if the other team has less negative frags"
+								setColorToTeamColor #TEAM_ALPHA
+							endif
+						endif
+					endif
+					drawNum %TEAM_ALPHA_SCORE						// we are still "if %TEAM == #TEAM_ALPHA" here :P
+
+					// enemy score number
+					setAlign #RIGHT, #MIDDLE
+					setCursor 495, 12
+					setColor 1, 0.95, 0.825, 0.9
+					// teamcolored numbers if the bar has nothing to show yet
+					if %TEAM_ALPHA_SCORE < 1
+						if %TEAM_BETA_SCORE >= %TEAM_ALPHA_SCORE	// showing score number in teamcolor for games with score 0:0
+							if %TEAM_BETA_SCORE >= 0				// "negative frags are teamcolored if the other team has less negative frags" fix!
+								setColorToTeamColor #TEAM_BETA
+							endif
+						endif
+					endif
+					drawNum %TEAM_BETA_SCORE
+					
+					// equal / spread
+					setAlign #CENTER, #MIDDLE
+					setCursor 400, 13
+					setSize 12, 12
+					setColor 1, 0.95, 0.825, 0.6
+					if %TEAM_ALPHA_SCORE == %TEAM_BETA_SCORE	// tied hint
+						if %TEAM_ALPHA_SCORE != 0				// but not at 0:0 (cosmetics)
+							drawString "="										// or tied or even or equal or even tight .. :)
+						endif
+					endif
+					if %TEAM_ALPHA_SCORE != %TEAM_BETA_SCORE	// spread
+						drawStringNum %TEAM_ALPHA_SCORE - %TEAM_BETA_SCORE
+					endif
+
+				endif		// im team alpha bar
+
+				// im team beta bar (a copy of alphas bar with switched around team variables)
+				if %TEAM == #TEAM_BETA
+					if %TEAM_BETA_SCORE <= 0
+						// both teams have a negative score
+						if %TEAM_ALPHA_SCORE <= 0
+
+							drawBar %TEAM_ALPHA_SCORE * -1, -1 * %TEAM_ALPHA_SCORE + %TEAM_BETA_SCORE
+							setCursor 291, 11
+							setSize 218, 15
+							drawBar %TEAM_ALPHA_SCORE * -1, -1 * %TEAM_ALPHA_SCORE + %TEAM_BETA_SCORE
+
+						endif
+					endif
+
+					// bar drawing for positive frags (team beta)
+					if %TEAM_BETA_SCORE > 0
+						// enemy managed to get negative score ;)
+						if %TEAM_ALPHA_SCORE < 0
+
+							drawBar 1, 1
+							setCursor 291, 11
+							setSize 218, 15
+							drawBar 1, 1
+
+						endif
+						// enemy has some score or zero
+						if %TEAM_ALPHA_SCORE >= 0
+
+							drawBar %TEAM_BETA_SCORE, %TEAM_ALPHA_SCORE + %TEAM_BETA_SCORE
+							setCursor 291, 11
+							setSize 218, 15
+							drawBar %TEAM_BETA_SCORE, %TEAM_ALPHA_SCORE + %TEAM_BETA_SCORE
+
+						endif
+					endif
+					
+					// own score number
+					setCursor 305, 12
+					setSize 13, 15
+					setColor 1, 0.95, 0.825, 0.9
+					// teamcolored numbers if the bar has nothing to show yet
+					if %TEAM_BETA_SCORE < 1
+						if %TEAM_ALPHA_SCORE >= %TEAM_BETA_SCORE
+							if %TEAM_ALPHA_SCORE >= 0
+								setColorToTeamColor #TEAM_BETA
+							endif
+						endif
+					endif
+					drawNum %TEAM_BETA_SCORE
+
+					// enemy scores
+					setAlign #RIGHT, #MIDDLE
+					setCursor 495, 12
+					setColor 1, 0.95, 0.825, 0.9
+					// teamcolored numbers if the bar has nothing to show yet
+					if %TEAM_BETA_SCORE < 1
+						if %TEAM_ALPHA_SCORE >= %TEAM_BETA_SCORE
+							if %TEAM_ALPHA_SCORE >= 0
+								setColorToTeamColor #TEAM_ALPHA
+							endif
+						endif
+					endif
+					drawNum %TEAM_ALPHA_SCORE
+					
+					// equal / spread number
+					setAlign #CENTER, #MIDDLE
+					setCursor 400, 13
+					setSize 12, 12
+					setColor 1, 0.95, 0.825, 0.6
+					if %TEAM_ALPHA_SCORE == %TEAM_BETA_SCORE
+						if %TEAM_ALPHA_SCORE != 0			// not at 0:0 (cosmetics)
+							drawString "="
+						endif
+					endif
+					if %TEAM_ALPHA_SCORE != %TEAM_BETA_SCORE
+						drawStringNum %TEAM_BETA_SCORE - %TEAM_ALPHA_SCORE
+					endif
+					
+				endif
+			endif		// teambased
+		endif			// !spectator
+
+		// default style score output for freeflying specs if there is a match in progress (ca/duel/da/tdm/ctf)
+		if %TEAM == #TEAM_SPECTATOR
+			if %MATCH_STATE != #MATCH_STATE_WARMUP
+
+				// fontscaling for team tags
+				setFont "virtue_10"
+				if %VIDWIDTH > 800
+					setFont "virtue_12"
+					if %VIDWIDTH >= 1280
+						setFont "virtue_16"
+						if %VIDWIDTH >= 1600
+							setFont "virtue_22"
+						endif
+					endif
+				endif
+				setAlign #CENTER, #MIDDLE
+
+				setColorToTeamColor #TEAM_ALPHA
+				setColorAlpha 1
+				setSize 18, 20
+				setCursor 300, 48
+				drawNum %TEAM_ALPHA_SCORE
+				setCursor 300, 80
+				drawString "ALPHA"
+	
+				setColorToTeamColor #TEAM_BETA
+				setColorAlpha 1
+				setSize 18, 20
+				setCursor 500, 48
+				drawNum %TEAM_BETA_SCORE
+				setCursor 500, 80
+				drawString "BETA"
+
+			endif
+		endif
+
+	endif				// beta score set
+endif					// alpha score set

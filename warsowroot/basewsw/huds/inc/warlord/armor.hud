@@ -1,0 +1,70 @@
+/*
+armor bar and numbers next to weapon-icon-orb-thingy.
+
+- no armor or instagib => no ui
+- armor pickup flashes
+- low armor warning
+*/
+precache gfx/hud/kuhjoe/lower_right
+precache gfx/hud/kuhjoe/glow_right
+
+if %TEAM != #TEAM_SPECTATOR	// no armor for freeflying specs
+	if %INSTAGIB == 0						// theres no armor in instagib
+
+		setAlign #CENTER, #MIDDLE
+
+		// armor background image and numbers
+		if %ARMOR > 0						// dont show the element if no armor is present
+			setColor 1, 0.95, 0.825, 0.9
+			setSize 128, 64
+			setCursor 464, 586
+			
+			// armor pickupflash
+			if %PICKUP_ITEM
+				if %PICKUP_ITEM == #ITEM_RED_ARMOR 
+					setColor 1, 0.975, 0.925, 1
+				endif
+				if %PICKUP_ITEM == #ITEM_YELLOW_ARMOR 
+					setColor 1, 0.975, 0.925, 1
+				endif
+				if %PICKUP_ITEM == #ITEM_GREEN_ARMOR 
+					setColor 1, 0.975, 0.925, 1
+				endif
+				if %PICKUP_ITEM == #ITEM_ARMOR_SHARD 
+					setColor 1, 0.975, 0.925, 1
+				endif
+			endif
+			// damage overrides pickup flash
+			if %DAMAGE_INDICATOR_LEFT && %DAMAGE_INDICATOR_RIGHT && %DAMAGE_INDICATOR_TOP && %DAMAGE_INDICATOR_BOTTOM > 0
+				setColor 0.88, 0.83, 0.68, 0.9
+			endif
+			drawPicByName "gfx/hud/kuhjoe/lower_right"
+			
+			// armor numbers
+			setSize 14, 20
+			setCursor 472, 576
+			setColor 1, 0.95, 0.825, 0.9
+			drawNum %ARMOR
+
+			// low armor warning
+			setAlign #RIGHT, #BOTTOM			// important, drawpicbars alignment
+			setCursor 528, 619
+			setSize 48, 65
+			// low and superlow armor warning
+			if %ARMOR < 66
+				setColor 1, 1, 0, 0.5
+				if %ARMOR < 33
+					setColor 1, 0, 0, 0.6
+				endif
+				drawPicByName "gfx/hud/kuhjoe/glow_right"
+			endif
+			
+			// mega armor bar (now starting with 100 instead of 150)
+			if %ARMOR > 100
+				setColor 0.1, 0.5, 1, 0.5
+				drawPicBar %ARMOR * 4.44, 1000, "gfx/hud/kuhjoe/glow_right"	// do not wonder about the strange calculation, its neccesary because of the way the image is cut out (fat space at bottom)
+			endif
+		endif
+
+	endif										// insta
+endif											// speck

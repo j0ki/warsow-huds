@@ -1,0 +1,14 @@
+setAlign 2 2
+setCursor #WIDTH / 2, #HEIGHT / 2
+if %RACE == 0
+	if %WEAPON_ITEM
+		if %WEAK_AMMO + %AMMO > 0
+			drawCrosshair
+		endif
+	endif
+endif
+if %RACE == 1
+	if %WEAPON_ITEM
+		drawCrosshair
+	endif
+endif

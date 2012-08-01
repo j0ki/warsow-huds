@@ -1,0 +1,16 @@
+if %INSTAGIB == 0
+
+	setAlign #CENTER #MIDDLE
+	setCursor 439, 575
+	drawweaponicons 45 0 48 48
+
+	setColorToTeamColor 1
+	setCursor 439, 561
+	setAlign #CENTER #TOP
+	drawweaponstrongammo 45 0 14
+
+	setCursor 439, 591
+	setAlign #CENTER #BOTTOM
+	drawweaponweakammo 45 0 11
+	
+endif

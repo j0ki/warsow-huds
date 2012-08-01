@@ -1,0 +1,111 @@
+if %INSTAGIB == 0
+// no ammo warning
+setAlign 2 2
+
+setFont "hemihead_24"
+if %VIDHEIGHT <= 1024
+	setFont "hemihead_20"
+	if %VIDHEIGHT < 720
+		setFont "hemihead_16"
+		if %VIDHEIGHT < 600
+			setFont "hemihead_14"
+			if %VIDHEIGHT < 500
+				setFont "virtue_10"
+				if %VIDHEIGHT < 400
+					setFont "virtue_8"
+				endif
+			endif
+		endif
+	endif
+endif
+// no ammo warning
+if %WEAPON_ITEM
+if %WEAPON_ITEM != #WEAP_GUNBLADE
+	if 0 >= %AMMO
+		//shadow
+		setAlign 2 2
+		setSize 24 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 24
+		setCursor #WIDTH / 2 , -50 + #HEIGHT / 2
+		moveCursor 2 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 2
+		setColor 0 0 0 0.8
+		drawString "Out Of Ammo"
+
+		setColor 1 0 0 0.8
+		moveCursor -2 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, -2
+		drawString "Out Of Ammo"
+
+		setColor 1 0 0 0.7
+		setCursor #WIDTH / 2, #HEIGHT / 2
+		drawPicByName "gfx/hud/icons/vsay/no"
+	endif
+endif
+endif
+
+// low ammo warning
+if %WEAPON_ITEM == #WEAP_MACHINEGUN
+	if 20 > %AMMO
+	if 0 < %AMMO
+		setCursor #WIDTH / 2 , -50 + #HEIGHT / 2
+		moveCursor 2 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 2
+		setColor 0 0 0 0.8
+		drawString "Low Ammo"
+
+		moveCursor -2 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, -2
+		setColor 1 1 1 0.8
+		drawString "Low Ammo"
+	endif
+	endif
+endif
+if %WEAPON_ITEM == #WEAP_PLASMAGUN
+	if 10 > %AMMO
+	if 0 < %AMMO
+		setCursor #WIDTH / 2 , -50 + #HEIGHT / 2
+		moveCursor 2 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 2
+		setColor 0 0 0 0.8
+		drawString "Low Ammo"
+
+		moveCursor -2 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, -2
+		setColor 1 1 1 0.8
+		drawString "Low Ammo"
+	endif
+	endif
+endif
+if %WEAPON_ITEM == #WEAP_LASERGUN
+	if 20 > %AMMO
+	if 0 < %AMMO
+		setCursor #WIDTH / 2 , -50 + #HEIGHT / 2
+		moveCursor 2 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 2
+		setColor 0 0 0 0.8
+		drawString "Low Ammo"
+
+		moveCursor -2 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, -2
+		setColor 1 1 1 0.8
+		drawString "Low Ammo"
+	endif
+	endif
+endif
+if %INSTAGIB == 0
+if %WEAPON_ITEM
+	if %WEAPON_ITEM != #WEAP_GUNBLADE
+	if %WEAPON_ITEM != #WEAP_MACHINEGUN
+	if %WEAPON_ITEM != #WEAP_PLASMAGUN
+	if %WEAPON_ITEM != #WEAP_LASERGUN
+		if 2 >= %AMMO
+		if 0 < %AMMO
+			setCursor #WIDTH / 2 , -50 + #HEIGHT / 2
+			moveCursor 2 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 2
+			setColor 0 0 0 0.8
+			drawString "Low Ammo"
+
+			moveCursor -2 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, -2
+			setColor 1 1 1 0.8
+			drawString "Low Ammo"
+		endif
+		endif
+	endif
+	endif
+	endif
+	endif
+endif
+endif
+endif

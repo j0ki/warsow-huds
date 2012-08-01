@@ -1,0 +1,29 @@
+if %CHASING != #NOTSET
+	setFont "hemihead_24"
+	if %VIDHEIGHT <= 1024
+		setFont "hemihead_20"
+		if %VIDHEIGHT < 720
+			setFont "hemihead_16"
+			if %VIDHEIGHT < 600
+				setFont "hemihead_14"
+				if %VIDHEIGHT < 500
+					setFont "virtue_10"
+					if %VIDHEIGHT < 400
+						setFont "virtue_8"
+					endif
+				endif
+			endif
+		endif
+	endif
+	setColor 1 1 1 0.8
+	setAlign 1 1
+	setCursor #WIDTH / 2, 60
+	moveCursor -30 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawPlayerName %CHASING
+
+	setAlign 3 1
+	setSize 24 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 24
+	moveCursor 0, -5
+	setColor 0.8 0.7 0.3 0.8
+	drawPicByName "gfx/hud/spec/cam"
+endif

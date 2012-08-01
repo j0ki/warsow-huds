@@ -1,0 +1,32 @@
+// hangy
+if %SHOW_PRESSED_KEYS != 0
+	if %TEAM != #TEAM_SPECTATOR										// not for freeflight but for chase
+
+		setSize 34, 34
+
+		setCursor 662, 535
+		drawKeyState left
+
+		setCursor 662, 503
+		drawKeyState jump
+
+		setCursor 694, 503
+		drawKeyState forward
+
+		setCursor 694, 535
+		drawKeyState backward
+
+		setCursor 726, 535
+		drawKeyState right
+
+		setCursor 726, 503
+		drawKeyState special
+
+		setCursor 758, 503
+		drawKeyState fire
+
+		setCursor 758, 535
+		drawKeyState crouch
+
+	endif		// spec
+endif			// keys

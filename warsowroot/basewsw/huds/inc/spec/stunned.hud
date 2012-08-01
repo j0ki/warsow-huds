@@ -1,0 +1,2727 @@
+if %STUNNED
+setCursor 0 40
+moveCursor -0.08 * %MATCH_DURATION - %MATCH_TIME, 0
+setAlign 1 1
+setSize 224 16
+setColor 1 1 1 0.65
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+drawPicByName "gfx/hud/spec/head_stun"
+moveCursor 224 0
+endif

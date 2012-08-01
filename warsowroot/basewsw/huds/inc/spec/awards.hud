@@ -1,0 +1,5 @@
+setCursor 400 130
+setFont electrofield_18
+setColor 1 1 1 1
+setAlign 2 1
+drawAwards

@@ -1,0 +1,20 @@
+setCursor 400 116
+setFont "hemihead_24"
+if %VIDHEIGHT <= 1024
+	setFont "hemihead_20"
+	if %VIDHEIGHT < 720
+		setFont "hemihead_16"
+		if %VIDHEIGHT < 600
+			setFont "hemihead_14"
+			if %VIDHEIGHT < 500
+				setFont "virtue_10"
+				if %VIDHEIGHT < 400
+					setFont "virtue_8"
+				endif
+			endif
+		endif
+	endif
+endif
+setColor 1 1 1 1
+setAlign 2 1
+drawAwards

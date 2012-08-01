@@ -1,0 +1,142 @@
+if %SHOW_PICKUP
+if %PICKUP_ITEM
+
+	setColor 0, 0, 0, 1
+	setAlign #CENTER, #TOP
+	//setCursor 402, 520
+ 	setCursor 402, 462
+	setFont "virtue_16"
+	drawItemName %PICKUP_ITEM
+
+	setColor 1, 1, 0.6, 1
+	setAlign #CENTER, #TOP
+	//setCursor 400, 518
+ 	setCursor 400, 460
+	setFont "virtue_16"
+	drawItemName %PICKUP_ITEM
+
+	// don't draw "picked up:" string in racemode
+	// (overlaps the timer, this is a cheap hack :P)
+	if %RACE == 0
+		setColor 0, 0, 0, 1
+		setAlign #CENTER, #TOP
+  	setCursor 402, 442
+		setFont "virtue_12"
+		drawString "Picked up:"
+
+
+		setColor 1, 1, 1, 1
+		setAlign #CENTER, #TOP
+  	setCursor 400, 440
+		setFont "virtue_12"
+		drawString "Picked up:"
+	endif
+
+endif
+
+if %SHOW_PICKUP
+if %PICKUP_ITEM
+
+	// change color according to item
+	if %PICKUP_ITEM == #ITEM_MEGA_HEALTH
+		// draws the backdrop shadow
+		setFont "virtue_16"
+		setAlign #CENTER, #TOP
+		setCursor 402, 320
+		setColor 0, 0, 0, 1
+		setSize 32 32
+		drawClock
+		// draws clock
+		setAlign #CENTER, #TOP
+		setCursor 400, 318
+		setColor 1, 0, 1, 1
+		setSize 32 32
+		drawClock
+	endif	
+	
+	if %PICKUP_ITEM == #ITEM_RED_ARMOR
+		// draws the backdrop shadow
+		setFont "virtue_16"
+		setAlign #CENTER, #TOP
+		setCursor 402, 320
+		setColor 0, 0, 0, 1
+		setSize 32 32
+		drawClock
+		// draws clock
+		setAlign #CENTER, #TOP
+		setCursor 400, 318
+		setColor 1, 0, 0, 1 // red
+		setSize 32 32
+		drawClock
+	endif
+	
+	if %PICKUP_ITEM == #ITEM_YELLOW_ARMOR
+		// draws the backdrop shadow
+		setFont "virtue_16"
+		setAlign #CENTER, #TOP
+		setCursor 402, 320
+		setColor 0, 0, 0, 1
+		setSize 32 32
+		drawClock
+		// draws clock
+		setAlign #CENTER, #TOP
+		setCursor 400, 318
+		setColor 1, 1, 0, 1 // yellow
+		setSize 32 32
+		drawClock
+	endif
+	
+	if %PICKUP_ITEM == #ITEM_GREEN_ARMOR
+		// draws the backdrop shadow
+		setFont "virtue_16"
+		setAlign #CENTER, #TOP
+		setCursor 402, 320
+		setColor 0, 0, 0, 1
+		setSize 32 32
+		drawClock
+		// draws clock
+		setAlign #CENTER, #TOP
+		setCursor 400, 318
+		setColor 0, 1, 0, 1 // green
+		setSize 32 32
+		drawClock
+	endif
+	
+	if %PICKUP_ITEM == #ITEM_QUAD
+		// draws the backdrop shadow
+		setFont "virtue_16"
+		setAlign #CENTER, #TOP
+		setCursor 402, 320
+		setColor 0, 0, 0, 1
+		setSize 32 32
+		drawClock
+		// draws clock
+		setAlign #CENTER, #TOP
+		setCursor 400, 318
+		setColor 1, 0.5, 0, 1 // orange
+		setSize 32 32
+		drawClock
+	endif
+	
+	if %PICKUP_ITEM == #ITEM_WARSHELL
+		// draws the backdrop shadow
+		setFont "virtue_16"
+		setAlign #CENTER, #TOP
+		setCursor 402, 320
+		setColor 0, 0, 0, 1
+		setSize 32 32
+		drawClock
+		// draws clock
+		setAlign #CENTER, #TOP
+		setCursor 400, 318
+		setColor 0, 1, 1, 1 // lightblue
+		setSize 32 32
+		drawClock
+	endif
+
+endif
+endif
+
+
+
+endif

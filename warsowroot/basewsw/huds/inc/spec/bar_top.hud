@@ -1,0 +1,10 @@
+setCursor #WIDTH / 2, 0
+setAlign 2 1
+setSize #WIDTH, 33.5
+setColor 0.8 0.8 0.8 1
+drawPicByName "gfx/hud/spec/topbar"
+
+if %MATCH_STATE < 4
+setSize 233 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 87
+drawPicByName "gfx/hud/spec/clock_bg"
+endif

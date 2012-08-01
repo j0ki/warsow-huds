@@ -1,0 +1,26 @@
+// draws the name of the player you are specatating next to cam icon
+if %CHASING != #NOTSET
+
+	setCursor 555, 11
+	
+	// camimage
+	setAlign #RIGHT, #MIDDLE
+	setColor 1, 1, 1, 0.4
+	setSize 38, 38
+	drawPicByName "gfx/hud/kuhjoe/cam_final"
+
+	// players name
+	setAlign #LEFT, #MIDDLE
+	// fontscaling
+	setFont "virtue_12"
+	if %VIDHEIGHT > 600
+		setFont "virtue_16"
+		if %VIDHEIGHT > 960
+			setFont "virtue_22"
+		endif
+	endif
+	setColor 1, 1, 1, 1
+	setCursor 556, 12
+	drawPlayerName %CHASING
+
+endif

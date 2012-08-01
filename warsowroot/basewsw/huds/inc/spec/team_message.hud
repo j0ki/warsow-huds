@@ -1,0 +1,127 @@
+//
+// MESSAGE
+//
+
+// what does this do
+/*if %MESSAGE_SELF
+	setColor 1 1 1 1
+	setCursor #WIDTH / 2, 380
+	setAlign 2 1
+	setFont "con_fontSystemsmall"
+	drawStatString %MESSAGE_SELF
+endif*/
+
+// what does this do
+/*if %MESSAGE_OTHER
+	setColor 1 1 1 1
+	setCursor #WIDTH / 2, #HEIGHT / 2
+	setAlign 2 1
+	setFont "con_fontSystemsmall"
+	drawStatString %MESSAGE_OTHER
+endif*/
+
+//
+// Draw CA players remaining icons
+//
+// might rewrite
+setCursor #WIDTH / 2, 2
+if %MESSAGE_ALPHA
+	if %TEAM == #TEAM_ALPHA
+		setFont "alive_right"
+		setAlign 3 1
+		setColor 0 0 0 1
+		moveCursor -100 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		if %TEAM_ALPHA_SCORE >= 10
+			moveCursor -16 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		endif
+		if %IMAGE_SELF
+			moveCursor -28 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		endif
+		moveCursor 1 1
+		drawStatString %MESSAGE_ALPHA
+		setColorToTeamColor #TEAM_ALPHA
+		moveCursor -1 -1
+		drawStatString %MESSAGE_ALPHA
+		if %TEAM_ALPHA_SCORE >= 10
+			moveCursor 16 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		endif
+		if %IMAGE_SELF
+			moveCursor 28 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		endif
+	endif
+
+	if %TEAM == #TEAM_BETA
+		setFont "alive_left"
+		setAlign 1 1
+		setColor 0 0 0 1
+		moveCursor 100 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		if %TEAM_ALPHA_SCORE >= 10
+			moveCursor 16 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		endif
+		if %IMAGE_BETA
+			moveCursor 28 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		endif
+		moveCursor 1 1
+		drawStatString %MESSAGE_ALPHA
+		setColorToTeamColor #TEAM_ALPHA
+		moveCursor -1, -1
+		drawStatString %MESSAGE_ALPHA
+		if %TEAM_ALPHA_SCORE >= 10
+			moveCursor -16 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		endif
+		if %IMAGE_BETA
+			moveCursor -28 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		endif
+	endif
+endif
+
+setCursor #WIDTH / 2, 2
+if %MESSAGE_BETA
+	if %TEAM == #TEAM_BETA
+		setFont "alive_right"
+		setAlign 3 2
+		setColor 0 0 0 1
+		moveCursor -100 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		if %TEAM_BETA_SCORE >= 10
+			moveCursor -16 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		endif
+		if %IMAGE_SELF
+			moveCursor -28 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		endif
+		moveCursor 1 1
+		drawStatString %MESSAGE_BETA
+		setColorToTeamColor #TEAM_BETA
+		moveCursor -1 -1
+		drawStatString %MESSAGE_BETA
+		if %TEAM_BETA_SCORE >= 10
+			moveCursor 16 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		endif
+		if %IMAGE_SELF
+			moveCursor 28 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		endif
+	endif
+
+	if %TEAM == #TEAM_ALPHA
+		setFont "alive_left"
+		setAlign 1 2
+		setColor 0 0 0 1
+		moveCursor 100 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		if %TEAM_BETA_SCORE >= 10
+			moveCursor 16 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		endif
+		if %IMAGE_BETA
+			moveCursor 28 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		endif
+		moveCursor 1 1
+		drawStatString %MESSAGE_BETA
+		setColorToTeamColor #TEAM_BETA
+		moveCursor -1 -1
+		drawStatString %MESSAGE_BETA
+		if %TEAM_BETA_SCORE >= 10
+			moveCursor -16 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		endif
+		if %IMAGE_BETA
+			moveCursor -28 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		endif
+	endif
+endif

@@ -1,0 +1,29 @@
+if %POWERUP_QUAD_TIME != 0
+	setAlign #CENTER, #MIDDLE
+	setSize 30, 30
+	setCursor 368, 60
+	drawPicByItemIndex #ITEM_QUAD
+
+	setColor 1, 1, 1, 1
+	setAlign #CENTER, #CENTER
+	setCursor 412, 60
+	drawNum %POWERUP_QUAD_TIME
+endif
+
+if %POWERUP_WARSHELL_TIME != 0
+	setAlign #CENTER, #MIDDLE
+	setSize 30, 30
+	setCursor 368, 60
+	if %POWERUP_QUAD_TIME != 0
+		setCursor 368, 90
+	endif
+	drawPicByItemIndex #ITEM_WARSHELL
+
+	setColor 1, 1, 1, 1
+	setAlign #CENTER, #CENTER
+	setCursor 412, 60
+	if %POWERUP_QUAD_TIME != 0
+		setCursor 412, 90
+	endif
+	drawNum %POWERUP_WARSHELL_TIME
+endif

@@ -1,0 +1,128 @@
+if %RACE == 0
+
+	if %WEAPON_ITEM
+		setSize 64 64
+		setAlign #RIGHT #MIDDLE
+		setCursor 755, 570
+		drawPicByItemIndex %WEAPON_ITEM
+	endif
+
+	if %AMMO
+		setColor 1 1 1 1
+		if %AMMO < 3
+			setColor 0.5 0.5 0.5 1
+		endif
+		setSize 32, 32
+		setAlign #CENTER, #RIGHT
+		setCursor 750, 575
+		drawNum %AMMO
+	endif
+
+	if %WEAK_AMMO
+		setColor 1 1 1 1
+		if %WEAK_AMMO < 3
+			setColor 0.6 0.6 0.6 1
+		endif
+		setSize 24, 24
+		setAlign #CENTER, #LEFT
+		setCursor 750, 575
+		drawNum %WEAK_AMMO
+	endif
+
+	// no ammo warning
+	if %WEAPON_ITEM
+	if %WEAPON_ITEM != #WEAP_GUNBLADE
+		if 0 >= %WEAK_AMMO + %AMMO
+			//shadow
+			setColor 0, 0, 0, 0.8
+			setAlign #CENTER, #MIDDLE
+			setCursor 2 + #WIDTH / 2 , -48 + #HEIGHT / 2
+			setFont con_fontSystemBig
+			drawString "Out Of Ammo"
+
+			setColor 1, 0, 0, 0.8
+			setCursor #WIDTH / 2 , -50 + #HEIGHT / 2
+			drawString "Out Of Ammo"
+
+			setColor 1, 0, 0, 0.7
+			setAlign #CENTER, #MIDDLE
+			setCursor #WIDTH / 2, #HEIGHT / 2
+			setSize 24 24
+			drawPicByName gfx/hud/icons/vsay/no
+		endif
+	endif
+	endif
+
+	// low ammo warning
+	if %WEAPON_ITEM == #WEAP_MACHINEGUN
+		if 10 > %WEAK_AMMO + %AMMO
+		if 0 < %WEAK_AMMO + %AMMO
+			setColor 0, 0, 0, 0.8
+			setAlign #CENTER, #MIDDLE
+			setCursor 2 + #WIDTH / 2 , -48 + #HEIGHT / 2
+			setFont con_fontSystemBig
+			drawString "Low Ammo"
+
+			setColor 1, 1, 1, 0.8
+			setCursor #WIDTH / 2 , -50 + #HEIGHT / 2
+			drawString "Low Ammo"
+		endif
+		endif
+	endif
+	if %WEAPON_ITEM == #WEAP_PLASMAGUN
+		if 10 > %WEAK_AMMO + %AMMO
+		if 0 < %WEAK_AMMO + %AMMO
+			setColor 0, 0, 0, 0.8
+			setAlign #CENTER, #MIDDLE
+			setCursor 2 + #WIDTH / 2 , -48 + #HEIGHT / 2
+			setFont con_fontSystemBig
+			drawString "Low Ammo"
+
+			setColor 1, 1, 1, 0.8
+			setCursor #WIDTH / 2 , -50 + #HEIGHT / 2
+			drawString "Low Ammo"
+		endif
+		endif
+	endif
+	if %WEAPON_ITEM == #WEAP_LASERGUN
+		if 20 > %WEAK_AMMO + %AMMO
+		if 0 < %WEAK_AMMO + %AMMO
+			setColor 0, 0, 0, 0.8
+			setAlign #CENTER, #MIDDLE
+			setCursor 2 + #WIDTH / 2 , -48 + #HEIGHT / 2
+			setFont con_fontSystemBig
+			drawString "Low Ammo"
+
+			setColor 1, 1, 1, 0.8
+			setCursor #WIDTH / 2 , -50 + #HEIGHT / 2
+			drawString "Low Ammo"
+		endif
+		endif
+	endif
+	if %INSTAGIB == 0
+	if %WEAPON_ITEM
+		if %WEAPON_ITEM != #WEAP_GUNBLADE
+		if %WEAPON_ITEM != #WEAP_MACHINEGUN
+		if %WEAPON_ITEM != #WEAP_PLASMAGUN
+		if %WEAPON_ITEM != #WEAP_LASERGUN
+			if 2 >= %WEAK_AMMO + %AMMO
+			if 0 < %WEAK_AMMO + %AMMO
+				setColor 0, 0, 0, 0.8
+				setAlign #CENTER, #MIDDLE
+				setCursor 2 + #WIDTH / 2 , -48 + #HEIGHT / 2
+				setFont con_fontSystemBig
+				drawString "Low Ammo"
+
+				setColor 1, 1, 1, 0.8
+				setCursor #WIDTH / 2 , -50 + #HEIGHT / 2
+				drawString "Low Ammo"
+			endif
+			endif
+		endif
+		endif
+		endif
+		endif
+	endif
+	endif
+
+endif

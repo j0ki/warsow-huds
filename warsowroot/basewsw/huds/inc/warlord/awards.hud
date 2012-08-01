@@ -1,0 +1,15 @@
+// default.hud awards with added scaling
+setFont "electrofield_20"
+if %VIDHEIGHT < 1200
+	setFont "electrofield_18"
+	if %VIDHEIGHT <= 768
+		setFont "electrofield_16"
+		if %VIDHEIGHT <= 600
+			setFont "virtue_12"
+		endif
+	endif
+endif
+setColor 1, 1, 1, 0.8
+setCursor 400, 110
+setAlign #CENTER, #TOP
+drawAwards

@@ -1,0 +1,53 @@
+if %MESSAGE_ALPHA
+	if %TEAM == #TEAM_ALPHA
+		setFont "alive_right"
+		setAlign 3 2
+		setCursor #WIDTH / 2, 5
+		moveCursor -80 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		moveCursor 1, 1
+		setColor 0 0 0 1
+		drawStatString %MESSAGE_ALPHA
+		moveCursor -1, -1
+		setColorToTeamColor #TEAM_ALPHA
+		drawStatString %MESSAGE_ALPHA
+	endif
+	if %TEAM == #TEAM_BETA
+		setFont "alive_left"
+		setAlign 1 2
+		setCursor #WIDTH / 2, 5
+		moveCursor 80 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		moveCursor 1, 1
+		setColor 0 0 0 1
+		drawStatString %MESSAGE_ALPHA
+		moveCursor -1, -1
+		setColorToTeamColor #TEAM_ALPHA
+		drawStatString %MESSAGE_ALPHA
+	endif
+endif
+
+if %MESSAGE_BETA
+	if %TEAM == #TEAM_BETA
+		setFont "alive_right"
+		setAlign 3 2
+		setCursor #WIDTH / 2, 5
+		moveCursor -80 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		moveCursor 1, 1
+		setColor 0 0 0 1
+		drawStatString %MESSAGE_BETA
+		moveCursor -1, -1
+		setColorToTeamColor #TEAM_BETA
+		drawStatString %MESSAGE_BETA
+	endif
+	if %TEAM == #TEAM_ALPHA
+		setFont "alive_left"
+		setAlign 1 2
+		setCursor #WIDTH / 2, 5
+		moveCursor 80 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+		moveCursor 1, 1
+		setColor 0 0 0 1
+		drawStatString %MESSAGE_BETA
+		moveCursor -1, -1
+		setColorToTeamColor #TEAM_BETA
+		drawStatString %MESSAGE_BETA
+	endif
+endif

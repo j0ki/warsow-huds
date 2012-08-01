@@ -1,0 +1,8 @@
+setAlign 1 1
+setCursor 5 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 5
+if %DOWNLOAD_IN_PROGRESS
+	moveCursor 0 28
+endif
+setSize 150 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 150
+setColor 0.8 0.8 0.8 1
+drawMiniMap 1 0

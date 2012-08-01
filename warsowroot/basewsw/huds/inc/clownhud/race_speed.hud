@@ -1,0 +1,94 @@
+if %RACE
+    
+    setAlign #CENTER, #MIDDLE
+    setFont speedwaystar18
+
+    if %TIME_SELF != #NOTSET
+        //background "clock"
+        setColor 0.2187, 0.2187, 0.2187, 1
+        setSize 40, 48
+        drawPicByName "gfx/hud/pale/timer/border"
+
+        if %TIME_BEST != 0
+            drawPicVar 100 * %TIME_SELF / %TIME_BEST, 0, 100, 0, 30, "gfx/hud/pale/timer/tick##"
+            if %TIME_SELF > %TIME_BEST
+                setColor .8, .8, .2, 1
+                drawPicVar -100 + 100 * %TIME_SELF / %TIME_BEST, 0, 100, 0, 30, "gfx/hud/pale/timer/tick##"
+            endif // over best time
+
+
+            setColor 0 1 1 1
+        endif // TIME_BEST != #NOTSET 0
+
+        if %TIME_BEST == 0
+            if %TIME_RECORD == 0
+                drawPicVar 100 * %TIME_SELF / 300, 0, 100, 0, 30, "gfx/hud/pale/timer/tick##" // whole timer = 30 seconds
+            endif
+
+            if %TIME_RECORD != 0
+                drawPicVar 100 * %TIME_SELF / %TIME_RECORD, 0, 100, 0, 30, "gfx/hud/pale/timer/tick##"
+                setColor 1 0 1 1
+            endif
+        endif // TIME_BEST == #NOTSET
+
+        moveCursor 1 2
+        setColor 0 0 0 1
+        drawTimer %TIME_SELF
+        moveCursor -1 -2
+
+// default color (green): current time < personal and server records
+        setColor .3 1 .3 1
+
+        if %TIME_SELF > %TIME_RECORD
+            if %TIME_RECORD > 0
+// worse than server record, still better than personal best: yellow
+                setColor .8 .65 .2 1
+            endif
+        endif
+
+        if %TIME_SELF > %TIME_BEST
+// worse than personal best time: red
+            if %TIME_BEST > 0
+                setColor .8 .3 .3 1
+            endif
+        endif
+
+        drawTimer %TIME_SELF
+    endif // %TIME_SELF != #NOTSET
+
+
+    if %SHOW_SPEED
+        moveCursor 15, -100
+
+// using alpha*max + beta*min for approximation of |velocity|
+
+        if %SHOW_SPEED >= 2
+
+            if %SPEED_VERTICAL < 0
+                if %SPEED > -1 * %SPEED_VERTICAL
+                    drawStringNum 0.96043387 * %SPEED - 0.39782473 * %SPEED_VERTICAL
+                endif
+                if %SPEED <= -1 * %SPEED_VERTICAL
+                    drawStringNum 0.39782473 * %SPEED - 0.96043387 * %SPEED_VERTICAL
+                endif
+            endif
+
+            if %SPEED_VERTICAL >= 0
+                if %SPEED > %SPEED_VERTICAL
+                    drawStringNum 0.96043387 * %SPEED + 0.39782473 * %SPEED_VERTICAL
+                endif
+                if %SPEED <= %SPEED_VERTICAL
+                    drawStringNum 0.39782473 * %SPEED + 0.96043387 * %SPEED_VERTICAL
+                endif
+            endif
+
+            moveCursor 0, 20
+            drawStringNum %SPEED_VERTICAL
+        endif // show_speed >= 2
+
+        moveCursor 0, 20
+        drawStringNum %SPEED
+
+    endif // SHOW_SPEED
+
+endif // %RACE

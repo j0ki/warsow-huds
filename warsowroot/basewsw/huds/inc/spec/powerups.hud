@@ -1,0 +1,23 @@
+if %RACE == 0
+setCursor #WIDTH / 2, #HEIGHT - 90
+moveCursor -40 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+setAlign 1 2
+setColor 1 1 1 1
+if %POWERUP_QUAD_TIME != 0
+	setSize 42 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 42
+	drawPicByItemIndex #ITEM_QUAD
+	setSize 21 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 21
+	moveCursor 45 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+	drawNum %POWERUP_QUAD_TIME
+	moveCursor -45 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, -47
+endif
+if %POWERUP_WARSHELL_TIME != 0
+	setSize 42 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 42
+	drawPicByItemIndex #ITEM_WARSHELL
+	setSize 21 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 21
+	moveCursor 45 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+	if %INSTAGIB != 1
+		drawNum %POWERUP_WARSHELL_TIME
+	endif
+endif
+endif

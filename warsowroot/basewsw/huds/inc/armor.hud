@@ -1,0 +1,66 @@
+if %RACE == 0
+if %ARMOR != #NOTSET
+if %ARMOR > 0
+
+	// draws the black border
+	setAlign #LEFT, #BOTTOM
+	setColor 0, 0, 0, 1
+	setCursor 160, 591
+	setSize 155, 38
+	drawPicByName $whiteimage
+
+	// draws the grey backdrop
+	setAlign #LEFT, #BOTTOM
+	setColor 0.2, 0.2, 0.2, 0.6
+	setCursor 194, 588 
+	setSize 118, 32
+	drawPicByName $whiteimage
+	
+	// draws the different opacities (of the bar)
+	if %ARMOR <= 30
+		setColor 1, 0.34, 0, 0.3
+	endif
+
+	if %ARMOR <= 60
+	if %ARMOR > 30
+		setColor 1, 0.34, 0, 0.6
+	endif
+	endif
+
+	if %ARMOR > 60
+		setColor 1, 0.34, 0, 1
+	endif
+
+	// draws the armorbar (0-100)
+	setCursor 194, 588
+	setSize 118, 32
+	drawBar %ARMOR 100
+
+	// draws the overlaying armorbar (101-200)
+	if %ARMOR > 100
+		setColor 1, 1, 1, 0.3
+		setAlign #LEFT, #BOTTOM
+		setCursor 194, 588 
+		setSize 118, 32
+		drawbar %ARMOR - 100, 100
+	endif
+
+	// draws the armor number
+	setAlign #LEFT, #BOTTOM
+	setColor 1, 1, 1, 1
+	setSize 26, 26
+	setCursor 194, 586
+	drawNum %ARMOR
+
+	// draws the armor icon
+	if %ARMOR
+		setRotationSpeed 0 1 0
+		setSize 30, 30
+		setAlign #LEFT, #BOTTOM
+		setCursor 162, 587
+		drawPicByItemIndex %ARMOR_ITEM 
+	endif
+
+endif
+endif
+endif

@@ -1,0 +1,6 @@
+// minimap from default hud, adjusted position and size
+setCursor 555, 60
+setColor 1, 0.95, 0.825, 0.8
+setAlign #LEFT, #TOP
+setSize 220, 220
+drawMiniMap 0, 0

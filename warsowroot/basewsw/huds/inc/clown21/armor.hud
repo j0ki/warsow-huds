@@ -1,0 +1,41 @@
+if %RACE == 0
+	setColor 1 1 1 1
+	setSize 42 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 42
+	setAlign 1 3
+	setCursor #WIDTH / 2, 595
+	moveCursor 7 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+	if %ARMOR != #NOTSET
+		if %TEAM != #TEAM_SPECTATOR
+			if %ARMOR == 0
+				drawPicByName gfx/hud/clown21/armor/noarmor_lowres
+			endif
+			if %ARMOR > 0
+				if %ARMOR < 50
+					//drawPicByName gfx/hud/icons/armor/ga
+					drawPicByName gfx/hud/clown21/armor/shard_lowres
+				endif
+			endif
+			if %ARMOR >= 50
+				if %ARMOR < 100
+					//drawPicByName gfx/hud/icons/armor/ga
+					drawPicByName gfx/hud/clown21/armor/ga_lowres
+					setColor 0.11 0.84 0.26 1
+				endif
+			endif
+			if %ARMOR >= 100
+				if %ARMOR < 125
+					//drawPicByName gfx/hud/icons/armor/ya
+					drawPicByName gfx/hud/clown21/armor/ya_lowres
+					setColor 1 0.96 0 1
+				endif
+			endif
+			if %ARMOR >= 125
+				//drawPicByName gfx/hud/icons/armor/ra
+				drawPicByName gfx/hud/clown21/armor/ra_lowres
+				setColor 1 0 0 1
+			endif
+			moveCursor 47 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0
+			drawNum %ARMOR
+		endif
+	endif
+endif

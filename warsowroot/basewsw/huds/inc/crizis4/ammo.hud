@@ -1,0 +1,11 @@
+if %RACE == 0
+
+	if %AMMO | %WEAK_AMMO
+		setColor 1 1 1 1
+		setSize 24, 24
+		setAlign #CENTER, #CENTER
+		setCursor 400,563
+		drawNum %AMMO + %WEAK_AMMO
+	endif
+	
+endif

@@ -1,0 +1,30 @@
+setFont con_fontSystemsmall
+
+include zoom
+include team_info
+include ammo
+include scores
+include times
+include progress
+include obituaries
+include powerups
+include picked_up_item
+include chasing
+include health
+include armor
+include frags
+include net
+include pointing
+include help_message
+include fps
+include clock
+include speed
+include weaponlist
+include crosshair
+include keystate
+include awards
+include capture_areas
+include minimap
+include chat
+
+include danlin/damage_indicator_screen

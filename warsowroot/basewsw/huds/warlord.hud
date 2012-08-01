@@ -1,0 +1,51 @@
+/* once upon a time... this was moohyo.hud.
+   which is now something different... without a name.
+   done by KuhJoe
+	
+thx and credits to:
+Bas1c, Discordi@, Etr, Jal, Koffie, Mystikal, warsow dev team for the game :)
+
+*/
+
+setFont con_fontSystemSmall
+setColor 1, 1, 1, 1
+
+// default.Hud elements
+include help_message
+include net
+include pointing
+include zoom
+include capture_areas
+include warlord/chat
+
+// warlord-hud stuff
+include warlord/damage_indicator_screen
+include warlord/minimap
+include warlord/damage_indicator_icons
+include warlord/chasing
+include warlord/fps
+include warlord/keystate
+include warlord/awards
+include warlord/weaponlist
+include warlord/spectatorlogo
+include warlord/picked_up_item
+include warlord/clock
+include warlord/obituaries
+include warlord/speed
+include warlord/scores
+include warlord/frags
+include warlord/race
+
+// important order because pu is on middle design which is drawn in weapon_orb
+// important order 2nd, ctf pie is drawn over weapon orb but under quad and weapon icon
+// important order 3rd, glowing ring around weaponorb should be under ammo / armor / health elements
+include warlord/weapon_orb
+include warlord/team_info		// has the ctf stuff now
+include warlord/weapon_icon
+include warlord/powerups
+include warlord/ammo
+include warlord/armor
+include warlord/health
+
+// crosshair goes over the weaponcolored dot
+include crosshair

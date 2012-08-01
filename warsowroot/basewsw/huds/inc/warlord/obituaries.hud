@@ -1,0 +1,26 @@
+// draws the kill log in the upper right corner of the screen
+setAlign #RIGHT, #TOP
+setCursor #WIDTH - 6, 6
+
+// leaves a space above for fps numbers
+if %SHOW_FPS > 0
+	setCursor #WIDTH - 6, 21
+endif
+
+// always move down while chasing to leave space for the players name
+if %CHASING != #NOTSET
+	setCursor #WIDTH - 6, 21
+endif
+
+// character-space vs resolution
+setSize 260, 340
+setFont "virtue_10"
+if %VIDWIDTH >= 1152
+	setSize 280, 340
+	setFont "virtue_12"
+	if %VIDWIDTH > 1280
+		setSize 300, 340
+		setFont "virtue_16"
+	endif
+endif
+drawObituaries #RIGHT, 15			// aligned to right, iconsize 15

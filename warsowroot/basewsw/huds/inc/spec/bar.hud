@@ -1,0 +1,9 @@
+if %HEALTH != #NOTSET
+setAlign 1 3
+setCursor 0, #HEIGHT - 10
+setSize #WIDTH 50
+//setColor 1 1 1 1
+//setColor 0 0.6 1 1
+setColor 1 1 1 1
+drawPicByName "gfx/hud/spec/bottombar"
+endif

@@ -1,0 +1,75 @@
+setCursor #WIDTH / 2, 40 + 25
+setAlign 2 2
+
+moveCursor 0 -34
+setColor 1 1 1 0.65
+setFont elementalend_40
+if %VIDHEIGHT >= 480
+moveCursor 0 0
+setFont elementalend_25
+	if %VIDHEIGHT >= 600
+	moveCursor 0 1
+	setFont elementalend_30
+		if %VIDHEIGHT >= 720
+		moveCursor 0 0
+		setFont elementalend_35
+			if %VIDHEIGHT >= 768
+			moveCursor 0 -2
+			setFont elementalend_40
+				if %VIDHEIGHT >= 800
+				moveCursor 0 -2
+				setFont elementalend_45
+					if %VIDHEIGHT >= 900
+					moveCursor 0 0
+					setFont elementalend_50
+						if %VIDHEIGHT >= 960
+						moveCursor 0 0
+						setFont elementalend_50
+							if %VIDHEIGHT >= 1024
+							moveCursor 0 1
+							setFont elementalend_55
+								if %VIDHEIGHT >= 1050
+								moveCursor 0 1
+								setFont elementalend_55
+									if %VIDHEIGHT >= 1080
+									moveCursor 0 -1
+									setFont elementalend_60
+										if %VIDHEIGHT >= 1200
+										moveCursor 0 0
+										setFont elementalend_65
+										endif
+									endif
+								endif
+							endif
+						endif
+					endif
+				endif
+			endif
+		endif
+	endif
+endif
+drawClock
+
+setFont "hemihead_24"
+if %VIDHEIGHT <= 1024
+	setFont "hemihead_20"
+	if %VIDHEIGHT < 720
+		setFont "hemihead_16"
+		if %VIDHEIGHT < 600
+			setFont "hemihead_14"
+			if %VIDHEIGHT < 500
+				setFont "virtue_10"
+				if %VIDHEIGHT < 400
+					setFont "virtue_8"
+				endif
+			endif
+		endif
+	endif
+endif
+//draws Warmup
+if %MATCH_STATE == #MATCH_STATE_WARMUP
+	setAlign 2 2
+	setCursor 400 100
+	setColor 0.4 1 0.4 0.5
+	drawString Warmup
+endif

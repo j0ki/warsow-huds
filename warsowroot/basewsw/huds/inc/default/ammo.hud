@@ -1,0 +1,21 @@
+setCursor #WIDTH #HEIGHT
+moveCursor -5 -10
+moveCursor -45 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, -30
+if %WEAPON_ITEM
+	setAlign 3 2
+	setSize 64 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 64
+	drawPicByItemIndex %WEAPON_ITEM
+endif
+
+moveCursor -5 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 4
+if %INSTAGIB == 0
+	if %AMMO
+		setColor 1 1 1 1
+		if %AMMO < 3
+			setColor 1 0.6 0.6 1
+		endif
+		setAlign 2 1
+		setSize 24 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 24
+		drawNum %AMMO
+	endif
+endif

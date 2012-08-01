@@ -1,0 +1,21 @@
+//
+// Draws team info (locations, status)
+//
+drawTeamMates
+
+if %VIDHEIGHT >= 768
+	setFont "virtue_12"
+endif
+if %VIDHEIGHT < 768
+	if %VIDHEIGHT >= 600
+		setFont "virtue_9"
+	endif
+	if %VIDHEIGHT < 600
+		setFont "virtue_8"
+	endif
+endif
+setAlign 3 3
+setColor 1 1 1 0.7
+setCursor #WIDTH, #HEIGHT
+moveCursor -5 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, -70
+drawTeamInfo

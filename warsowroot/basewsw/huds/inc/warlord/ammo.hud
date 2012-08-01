@@ -1,0 +1,109 @@
+/*
+ammo count numbers next to weapon-icon-orb-thingy. 
+
+- low and no ammo warning
+- no strong ammo => no ui
+- subtle ammo pickup flashes
+*/
+precache gfx/hud/kuhjoe/upper_left
+precache gfx/hud/kuhjoe/upper_right
+
+if %TEAM != #TEAM_SPECTATOR										// !spectator
+	if %INSTAGIB == 0															// no ammo ui for insta
+
+		setAlign #CENTER, #MIDDLE
+		
+		// weak ammo ui with low warning (warning disabled for gunblade)
+		if %WEAPON_ITEM != #ITEM_GUNBLADE
+			setSize 128, 32
+			setCursor 337, 539
+			setColor 1, 0.95, 0.825, 0.9
+
+			// low ammo - warnlevel yellow
+			// ammocheck traverses from hungry weapons to the moderate ones
+			if %WEAK_AMMO < 41			// LASERGUN
+				if %WEAPON_ITEM == #ITEM_LASERGUN
+					setColor 1, 0.7, 0.4, 0.9
+				endif
+				if %WEAK_AMMO < 21		// + PLASMAGUN
+					if %WEAPON_ITEM == #ITEM_PLASMAGUN
+						setColor 1, 0.7, 0.4, 0.9
+					endif
+					if %WEAK_AMMO < 6		// + RIOTGUN, GRENADE_LAUNCHER, ROCKET_LAUNCHER, MACHINEGUN
+						if %WEAPON_ITEM != #ITEM_ELECTROBOLT
+							setColor 1, 0.7, 0.4, 0.9
+						endif
+						if %WEAK_AMMO < 4	// + ELECTROBOLT
+							setColor 1, 0.7, 0.4, 0.9
+						endif
+					endif
+				endif
+			endif
+
+			// empty weapon - warnlevel red
+			if 1 > %WEAK_AMMO + %AMMO		// remember: hudscript is parsed from right to left
+				setColor 1, 0.3, 0, 0.9
+			endif
+			
+			// pickup flash, can always overide warning colors, because picking up a weapon always gives enough weak ammo
+			if %PICKUP_ITEM == %WEAPON_ITEM
+				setColor 1, 0.975, 0.925, 1
+			endif
+			drawPicByName "gfx/hud/kuhjoe/upper_left"
+
+			// weak ammo number
+			setColor 1, 0.95, 0.825, 0.9
+			setCursor 328, 539
+			setSize 12, 14
+			drawNum %WEAK_AMMO
+
+		endif		//!gunblade
+
+		// strong ammo ui and low strong ammo warning
+		setSize 128, 32
+		setCursor 463, 539
+		setColor 1, 0.95, 0.825, 0.9
+
+		// low strong ammo warning color
+		if %AMMO > 0																	// no strong ammo, no ui
+			if %AMMO < 31
+				if %WEAPON_ITEM == #ITEM_LASERGUN
+					setColor 1, 0.7, 0.4, 0.9
+				endif
+				if %AMMO < 16
+					if %WEAPON_ITEM == #ITEM_PLASMAGUN		// + PLASMAGUN
+						setColor 1, 0.7, 0.4, 0.9
+					endif
+					if %AMMO < 4														// + RIOTGUN, GRENADE_LAUNCHER, MACHINEGUN
+						if %WEAPON_ITEM != #ITEM_ROCKET_LAUNCHER
+							if %WEAPON_ITEM != #ITEM_ELECTROBOLT
+								setColor 1, 0.7, 0.4, 0.9
+							endif
+						endif
+						if %AMMO < 3													// + ROCKET_LAUNCHER, ELECTROBOLT
+							if %WEAPON_ITEM != #ITEM_GUNBLADE	// gunblade never runs out
+								setColor 1, 0.7, 0.4, 0.9
+							endif
+						endif
+					endif
+				endif
+			endif
+
+			// strong ammo image and pickup flash (unless low strong ammo warning)
+			if %PICKUP_ITEM == %AMMO_ITEM
+				if %AMMO > 3			// picking up rl / eb ammo(+5) while having no ammo can last long enough to be able to shot 2 times and should therefore generate a warning instead of a pickup flash
+					setColor 1, 0.975, 0.925, 1
+				endif
+			endif
+			drawPicByName "gfx/hud/kuhjoe/upper_right"
+
+			// strong ammo number
+			setColor 1, 0.95, 0.825, 0.9
+			setCursor 472, 539
+			setSize 12, 14
+			drawNum %AMMO
+
+		endif		// player has strong ammo
+
+	endif			// !instagib
+endif				// !spec

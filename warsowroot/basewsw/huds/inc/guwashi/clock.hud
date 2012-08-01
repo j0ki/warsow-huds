@@ -1,0 +1,106 @@
+setCursor #WIDTH / 2, 0
+moveCursor 0, 4
+
+/* Clock Pie 
+setSize 32 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 32
+setColor 0 0 0 0.7
+drawPicByName "gfx/hud/kuhjoe/ctf_pie/tortenschlacht_33"
+setColor 1 1 1 1
+drawPicVar %MATCH_DURATION - %MATCH_TIME, 0, %MATCH_DURATION, 1, 33, "gfx/hud/kuhjoe/ctf_pie/tortenschlacht_##"*/
+
+/* Clock */
+setColor 1 1 1 1
+
+// Change color momentarly if pickup
+if %SHOW_PICKUP > 0
+	if %PICKUP_ITEM == #ITEM_RED_ARMOR
+		setColor 1 0 0 1 // red
+		// draws optional clock
+		setFont "clockfont_19"
+		setAlign #CENTER, #TOP
+		setCursor 400, 318
+		setSize 32 32
+		drawClock
+	endif
+	if %PICKUP_ITEM == #ITEM_YELLOW_ARMOR
+		setColor 1 1 0 1 // yellow
+		// draws optional clock
+		setFont "clockfont_19"
+		setAlign #CENTER, #TOP
+		setCursor 400, 318
+		setSize 32 32
+		drawClock
+	endif
+	if %PICKUP_ITEM == #ITEM_GREEN_ARMOR
+		setColor 0 1 0 1 // green
+		// draws optional clock
+		setFont "clockfont_19"
+		setAlign #CENTER, #TOP
+		setCursor 400, 318
+		setSize 32 32
+		drawClock
+	endif
+	if %PICKUP_ITEM == #ITEM_MEGA_HEALTH
+		setColor 1 0 1 1 // magenta
+		// draws optional clock
+		setFont "clockfont_19"
+		setAlign #CENTER, #TOP
+		setCursor 400, 318
+		setSize 32 32
+		drawClock
+	endif
+	if %PICKUP_ITEM == #ITEM_QUAD_DAMAGE
+		setColor 1 0.5 0 1 // orange
+		// draws optional clock
+		setFont "clockfont_19"
+		setAlign #CENTER, #TOP
+		setCursor 400, 318
+		setSize 32 32
+		drawClock
+	endif
+	if %PICKUP_ITEM == #ITEM_WARSHELL
+		setColor 0 1 1 1 // cyan
+		// draws optional clock
+		setFont "clockfont_19"
+		setAlign #CENTER, #TOP
+		setCursor 400, 318
+		setSize 32 32
+		drawClock
+	endif
+endif
+
+setCursor #WIDTH / 2, 0
+moveCursor 0, 4
+
+setFont "clockfont_35"
+if %VIDHEIGHT <= 1024
+	setFont "clockfont_23"
+	if %VIDHEIGHT < 720
+		setFont "clockfont_19"
+		if %VIDHEIGHT < 600
+			setFont "clockfont_11"
+		endif
+	endif
+endif
+setAlign 2 1 //can't be vertically aligned (bug or something)
+moveCursor 0 20
+drawClock
+
+/* Match States 
+setFont "virtue_22"
+if %VIDHEIGHT <= 1024
+	setFont "virtue_16"
+	if %VIDHEIGHT < 720
+		setFont "virtue_12"
+		if %VIDHEIGHT < 600
+			setFont "virtue_10"
+		endif
+	endif
+endif
+
+setAlign 2 1
+setCursor #WIDTH / 2, 45
+setColor 1 1 1 0.5
+if %MATCH_STATE == #MATCH_STATE_WARMUP
+    drawString "Warmup"
+endif*/

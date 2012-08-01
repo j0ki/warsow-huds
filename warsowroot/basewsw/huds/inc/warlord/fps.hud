@@ -1,0 +1,31 @@
+/*
+cheap silly fps numbers are always squezed into upper right corners ;0
+
+- unsupported feature: optional design adjustment: cg_showfps 2 => fps num gets underlying fps icon
+- unsupported feature: set cg_showfps to your cl_maxfps to get low fps warning via iconhighliting
+*/
+
+if %SHOW_FPS > 0
+
+	setAlign #RIGHT, #TOP
+	setCursor #WIDTH - 1, 1
+
+	if %SHOW_FPS > 1										// cg_showfps 2+
+
+		setSize 62, 28
+		setColor 1, 1, 1, 0.6
+		if %SHOW_FPS >= 60								// min cg_showfps value for warningthreshold to start with, values below are handled as beeing cg_showfps 2
+			if %SHOW_FPS > %FPS + 3				// positively thinking(=less annoying) low fps warning level. ie: fps=82 showfps=100 --> warning, fps=99 --> no warning
+				setColor 1, 0.95, 0.825, 0.9				// icon "flashes" due to less transparency
+			endif
+		endif
+		drawPicByName "gfx/hud/kuhjoe/fps_icon"	// backgroundicon
+		setCursor #WIDTH - 34, 4
+	
+	endif
+
+	setColor 1, 0.95, 0.825, 0.6
+	setSize 9, 13
+	drawNum  %FPS											// cg_showfps 1 will have only numbers and no icon here
+
+endif

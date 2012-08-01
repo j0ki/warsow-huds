@@ -1,0 +1,30 @@
+// a vertical weaponlist at the right border of the screen with a custom selection border
+if %TEAM != #TEAM_SPECTATOR							// dont show in freeflight mode
+
+	// only show weapons/ammo if not instagibbing
+	if %INSTAGIB == 0
+		// and being alive
+		if %HEALTH > 0
+
+			if %VIDHEIGHT < 960
+				setCustomWeaponSelect "gfx/hud/kuhjoe/weapsel_orb_lowres"
+			endif
+			if %VIDHEIGHT >= 960
+				setCustomWeaponSelect "gfx/hud/kuhjoe/weapsel_orb"
+			endif
+			setAlign #CENTER, #MIDDLE
+			setCursor 16, 240
+			drawWeaponIcons 0, 32, 22, 22
+
+			setCursor 32, 229
+			setAlign #LEFT, #TOP
+			drawWeaponStrongAmmo 0, 32, 11
+
+			setCursor 32, 251
+			setAlign #LEFT, #BOTTOM
+			drawWeaponWeakAmmo 0, 32, 11
+			
+		endif
+	endif
+
+endif

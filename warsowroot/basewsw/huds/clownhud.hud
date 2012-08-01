@@ -1,0 +1,69 @@
+/*
+Credz:
+ - Warsow Team
+ - Scratch
+ - joki
+ - kuhjoe
+ - clownFart for most of the work
+*/
+
+/*
+ //clock
+	- place chasing depending on clock possition
+ //scores
+	- maybe add score for gametypes like DA
+	- add low and high res graphics
+ //keystate
+	- make new keystate
+ //chat
+	- make new chat gfx
+ //must include in pk3
+	- zerotwos40 fonts
+	- > < = graphic for score
+	
+ // aspect ratio equation
+ // * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH
+ // by joki
+ 
+ race stuff by scratch
+
+*/
+
+setFont con_fontSystemsmall
+setScale #DEFAULTSCALE
+if %MATCH_STATE < 4
+include clownhud/damage_indicator_screen
+include clownhud/crosshair
+if %RACE == 0
+include clownhud/health_armor
+include clownhud/scores
+include clownhud/weaponlist
+include clownhud/stunned
+include clownhud/ammo_warning
+include clownhud/obituaries
+include clownhud/powerups
+include clownhud/clock
+include clownhud/team_info
+include clownhud/team_image
+include clownhud/team_message
+include clownhud/team_progress
+include clownhud/minimap
+include clownhud/item_timers
+endif //if %RACE == 0
+include clownhud/chasing
+include clownhud/pointing
+include clownhud/help_message
+include clownhud/awards
+include clownhud/download
+include clownhud/net
+include clownhud/speed
+include clownhud/fps
+include keystate
+// Race
+setCursor 250, 470
+include clownhud/race_records
+setCursor 400, 400
+include clownhud/race_speed
+include clownhud/race_times
+endif
+include clownhud/chat

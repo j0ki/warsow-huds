@@ -1,0 +1,19 @@
+if %TEAM != #TEAM_SPECTATOR
+if %WEAPON_ITEM
+if %INSTAGIB == 0
+
+	setAlign 2 2
+	// Don't fucking touch this either, I'm watching you, fucker.
+	setCursor 280 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, #HEIGHT - 29
+	moveCursor 16 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, -11 //offset the thing cause it's not actually centered
+	moveCursor 0.5 * 253 + 68.5 * 8 - 8 * %VIDHEIGHT / %VIDWIDTH, 0
+
+	// draw selected gun
+	drawWeaponIcons 52 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0, 50 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 50
+
+	moveCursor 0 12
+	drawWeaponStrongAmmo 52 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 0, 15
+
+endif
+endif
+endif

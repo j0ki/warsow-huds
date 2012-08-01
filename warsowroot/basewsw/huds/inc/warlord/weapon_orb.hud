@@ -1,0 +1,132 @@
+/*
+central background element, aka weapon-icon-orb-thingy with seperate designs for insta / noninsta / race
+
+normal dm:
+- selected weapon icon (replaced by quad/warshell in powerups.hud)
+- weaponcolored glow
+- fancy warsow logo for dead players and postmatch instead of weaponicon
+- resolution friendly
+
+instagib:
+- different central logo with no functionality but to look nice
+
+race:
+race-o-meter has been moved to race.hud for easier maintenance
+*/
+
+if %RACE	== 0																			// race has tachometer instead (see race.hud)
+	if %TEAM != #TEAM_SPECTATOR										// !spectator
+
+		// orbs design for deathmatch games
+		if %INSTAGIB == 0
+			
+			setAlign #CENTER, #MIDDLE
+
+			// underlying glowing ring
+			setCursor 400, 554
+			setSize 110, 110
+
+			// set rings color to weaponcolor
+			if %WEAPON_ITEM == #ITEM_INSTAGUN
+				setColor 0.9, 0.2, 0.4, 1
+			endif
+			if %WEAPON_ITEM == #ITEM_GUNBLADE
+				setColor 0.8, 0.75, 0.625, 0.8
+			endif
+			if %WEAPON_ITEM == #ITEM_RIOTGUN
+				setColor 0.8, 0.5, 0, 0.8
+			endif
+			if %WEAPON_ITEM == #ITEM_GRENADE_LAUNCHER
+				setColor 0.1, 0.3, 1, 0.8
+			endif
+			if %WEAPON_ITEM == #ITEM_ROCKET_LAUNCHER
+				setColor 1, 0.14, 0, 0.8
+			endif
+			if %WEAPON_ITEM == #ITEM_PLASMAGUN
+				setColor 0, 1, 0, 0.8
+			endif
+			if %WEAPON_ITEM == #ITEM_LASERGUN
+				setColor 1, 0.9, 0.2, 0.8
+			endif
+			if %WEAPON_ITEM == #ITEM_ELECTROBOLT
+				setColor 0, 1, 1, 0.8
+			endif
+			if %WEAPON_ITEM == #ITEM_MACHINEGUN
+				setColor 1, 0, 1, 0.8
+			endif
+			
+			// override color if dead
+			if %HEALTH < 1
+				setColor 0.2, 0, 0, 0.8
+			endif
+			// override color if game has ended
+			if %MATCH_STATE == #MATCH_STATE_POSTMATCH
+				setColor 0.2, 0, 0, 0.8
+			endif
+			if %MATCH_STATE == #MATCH_STATE_WAITEXIT
+				setColor 0.2, 0, 0, 0.8
+			endif
+			drawPicByName "gfx/hud/kuhjoe/underglow_1_lowres"				// weaponcolored glowing ring image
+
+			// show central orb image over glowing ring
+			setSize 123, 123
+			setColor 1, 0.95, 0.825, 0.9
+			if %VIDHEIGHT <= 600
+				drawPicByName "gfx/hud/kuhjoe/middle_toyish_lowres"		// downscale-alias less low res version of central orb image
+			endif
+			if %VIDHEIGHT > 600
+				drawPicByName "gfx/hud/kuhjoe/middle_toyish"					// central orb image
+			endif
+
+			// end of game screen - show logo (note: weaponicon will not be drawn at postmatch because we "spec", this fills the kinda empty orb)
+			if %MATCH_STATE == #MATCH_STATE_POSTMATCH
+				setSize 108, 108
+				drawPicByName "gfx/hud/kuhjoe/logo_fancy"
+			endif
+			if %MATCH_STATE == #MATCH_STATE_WAITEXIT
+				setSize 108, 108
+				drawPicByName "gfx/hud/kuhjoe/logo_fancy"
+			endif
+
+		endif		// ends non insta design
+
+		// orbs instagib design and position
+		if %INSTAGIB != 0
+
+			setAlign #CENTER, #MIDDLE
+			setCursor 332, 568
+
+			// main instagib orb image, useless and just there to look fancy :)
+			// its a different looking dead player logo orb from above
+			setSize 64, 64
+			setColor 1, 0.95, 0.825, 0.7
+			if %VIDHEIGHT <= 768
+				drawPicByName "gfx/hud/kuhjoe/middle_toyish_lowres"
+			endif
+			if %VIDHEIGHT > 768
+				drawPicByName "gfx/hud/kuhjoe/middle_toyish"
+			endif
+
+			// creates a slight blueish glowing around the logo
+			setSize 58, 58
+			setColor 0.37, 0.6, 0.59, 0.34
+			drawPicByName "gfx/hud/kuhjoe/underglow_1_lowres"
+
+			// show wsw logo image if no progress pie is to be drawn
+			if 0 == %PROGRESS_OTHER
+				if 0 == %PROGRESS_SELF
+					setSize 64, 64
+					setColor 1, 1, 1, 0.7
+					if %VIDHEIGHT <= 768												// up to 1024x768
+						drawPicByName "gfx/hud/kuhjoe/logo_fancy_lowres"
+					endif
+					if %VIDHEIGHT > 768
+						drawPicByName "gfx/hud/kuhjoe/logo_fancy"
+					endif
+				endif
+			endif	// progress
+			
+		endif		// instagib design ends here
+
+	endif			// !spec
+endif				// !race

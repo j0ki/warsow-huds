@@ -1,0 +1,14 @@
+setAlign 3 1
+setCursor #WIDTH - 6 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 6
+if %SHOW_FPS > 0
+	moveCursor 0 8
+endif
+setSize 300 * 1.3333333333 * %VIDHEIGHT / %VIDWIDTH, 340
+setFont "virtue_10"
+if %VIDWIDTH >= 1152
+	setFont "virtue_12"
+	if %VIDWIDTH > 1280
+		setFont "virtue_16"
+	endif
+endif
+drawObituaries 3 16 // aligned to right, iconsize 15

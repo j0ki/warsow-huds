@@ -1,0 +1,336 @@
+/*
+a modified default race hud with added speedometer 
+
+- seperate layout for freeflying specs and players in race
+- race-o-meter features a speed dependant lighting
+- unsupported feature: cg_showspeed 2 adds a centralised ups num output
+*/
+
+if %RACE													// skips everything if we do not race
+	if %TEAM == #TEAM_SPECTATOR		// map records overview in spectator mode (freeflying)
+
+		// players best time
+		setFont "virtue_12"
+		if %VIDHEIGHT < 768
+			setFont "virtue_10"
+		endif
+
+		// shadowed text
+		setColor 0, 0, 0, 1
+		setAlign #RIGHT, #BOTTOM
+		setCursor 511, 535
+		drawString "Your Best:"
+
+		// fill text
+		setColor 0.8, 0.75, 0.625, 0.9
+		setCursor 510, 534
+		drawString "Your Best:"
+
+		// shadow PLAYERBESTTIME
+		setAlign #LEFT, #BOTTOM
+		setColor 0, 0, 0, 1
+		setCursor 516, 535
+		drawTimer %TIME_BEST
+
+		// fill PLAYERBESTTIME
+		setColor 1, 0.95, 0.825, 0.9
+		setCursor 515, 534
+		drawTimer %TIME_BEST
+
+		// servers record time
+		setFont "virtue_16"
+		if %VIDHEIGHT < 768
+			setFont "virtue_12"
+		endif
+		setAlign #RIGHT, #BOTTOM
+		setColor 0, 0, 0, 1
+		setCursor 719, 535
+		drawString "Server Record:"
+
+		setColor 0.8, 0.75, 0.625, 0.9
+		setCursor 718, 534
+		drawString "Server Record:"
+
+		setAlign #LEFT, #BOTTOM
+		setColor 0, 0, 0, 1
+		setCursor 724, 535
+		drawTimer %TIME_RECORD
+
+		setColor 1, 0.95, 0.825, 0.9
+		setCursor 723, 534
+		drawTimer %TIME_RECORD	
+
+	endif
+	
+	// racers time and records
+	if %TEAM != #TEAM_SPECTATOR		// runnin, not flyin around
+
+		// map records and current run time
+		setAlign #CENTER, #BOTTOM
+
+		// fontscaling current time and speed-num
+		setFont "virtue_16"
+		if %VIDHEIGHT < 768
+			setFont "virtue_12"
+		endif
+		
+		// text shadow
+		setColor 0, 0, 0, 1
+		setCursor 451, 471
+		drawString "Speed:"
+		
+		// text fill
+		setColor 0.8, 0.75, 0.625, 0.9
+		setCursor 450, 470
+		drawString "Speed:"
+
+		// current speed shadow
+		setColor 0, 0, 0, 1
+		setCursor 451, 491
+		drawStringNum %SPEED
+		
+		// current speed fill
+		setColor 1, 0.95, 0.825, 0.9
+		setCursor 450, 490
+		drawStringNum %SPEED
+
+		// text shadow
+		setColor 0, 0, 0, 1
+		setCursor 351, 471
+		drawString "Time:"
+		
+		// text fill
+		setColor 0.8, 0.75, 0.625, 0.9
+		setCursor 350, 470
+		drawString "Time:"
+
+		// current time shadow
+		setColor 0, 0, 0, 1
+		setCursor 351, 491
+		drawTimer %TIME_SELF
+		
+		// current time fill
+		setColor 1, 0.95, 0.825, 0.9
+		setCursor 350, 490
+		drawTimer %TIME_SELF
+
+		// players record and servers record
+		// fontscaling - records overview
+		setFont "virtue_12"
+		if %VIDHEIGHT < 768
+			setFont "virtue_10"
+		endif
+		// shadow
+		setColor 0, 0, 0, 1
+		setCursor 41, 551
+		drawString "Best:"
+
+		// shine
+		setColor 0.8, 0.75, 0.625, 0.9
+		setCursor 40, 550
+		drawString "Best:"
+
+		// player best time
+		setColor 0, 0, 0, 1
+		setCursor 41, 571
+		drawTimer %TIME_BEST
+
+		setColor 1, 0.95, 0.825, 0.9
+		setCursor 40, 570
+		drawTimer %TIME_BEST
+
+		// server best time text
+		setColor 0, 0, 0, 1
+		setCursor 111, 551
+		drawString "Srv Best:"
+
+		setColor 0.8, 0.75, 0.625, 0.9
+		setCursor 110, 550
+		drawString "Srv Best:"
+
+		// server best time score
+		setColor 0, 0, 0, 1
+		setCursor 111, 571
+		drawTimer %TIME_RECORD
+
+		setColor 1, 0.95, 0.825, 0.9
+		setCursor 110, 570
+		drawTimer %TIME_RECORD
+		
+		// race-o-meter (ONLY SHOWS HSPEED unlike cg_showspeed 2 which sums up hspeed and vspeed)
+		setAlign #CENTER, #MIDDLE
+		setCursor #WIDTH / 2, 554
+
+		// undelying glow
+		setSize 98, 98
+		setColor 1, 0.95, 0.825, 0.88
+		drawPicByName "gfx/hud/kuhjoe/underglow_1_lowres"
+
+		// main background
+		setSize 138, 138
+		setColor 1, 0.95, 0.825, 0.92
+		if %VIDHEIGHT <= 600
+			drawPicByName "gfx/hud/kuhjoe/middle_toyish_lowres"
+		endif
+		if %VIDHEIGHT > 600
+			drawPicByName "gfx/hud/kuhjoe/middle_toyish"
+		endif
+
+		// speedometer iterations image
+		setSize 136, 136
+		setColor 0, 0, 0, 0.44
+		drawPicByName "gfx/hud/kuhjoe/speedtacho/tachometer_ring"
+
+		// speedometer iterations label image
+		setColor 0, 0, 0, 0.6
+		drawPicByName "gfx/hud/kuhjoe/speedtacho/tachometer_numbers_ups"
+
+		// the needle
+		setColor 1, 1, 1, 1
+		setSize 80, 80
+		drawPicVar %SPEED, 0, 3000, 1, 35, "gfx/hud/kuhjoe/speedtacho/tachonadel_##"
+
+		// ups numbers background image
+		setColor 0, 0, 0, 0.6
+		setSize 136, 136
+		drawPicByName "gfx/hud/kuhjoe/speedtacho/tachometer_speedoverlay"
+
+		// ups numbers text
+		setColor 1, 0.95, 0.825, 1
+		setCursor #WIDTH / 2, 583
+		setSize 8, 10
+		if %SPEED >= 100
+			setSize 7, 10
+		endif
+		drawNum %SPEED
+
+		// ups numbers speed dependant lighting overlay
+		setCursor #WIDTH / 2, 560
+		setSize 127, 110
+		setColor 1, %SPEED / 1000, 0, 0.33
+		if %SPEED > 1000
+			setColor 1000 / %SPEED * 1.2, 1, 0, 0.33
+			if %SPEED > 2000
+				setColor 1000 / %SPEED * 1.4, 1, 0.001 * %SPEED - 2000, 0.33
+				if %SPEED > 3000
+					setColor 0.0024 * %SPEED - 3000, 1, 1, 0.33
+				endif
+			endif
+		endif
+		drawPicByName "gfx/hud/kuhjoe/speedtacho/tachometer_speedoverlay"
+
+		// additional ups number output at center if cg_showspeed is 2 which also includes vspeed (uses same code as in speed.hud)
+		if %SHOW_SPEED == 2
+
+			// adjust fontsize to resolution
+			setFont "virtue_10"
+			if %VIDHEIGHT >= 600
+				setFont "virtue_12"
+				if %VIDHEIGHT > 768
+					setFont "virtue_16"
+					if %VIDHEIGHT > 960
+						setFont "virtue_22"
+					endif
+				endif
+			endif
+			
+			// ups number shadow
+			setColor 0, 0, 0, 0.9
+			setCursor 400, 401
+			drawStringNum %SPEED + %SPEED_VERTICAL
+			
+			// ups number shine
+			setColor 1, 0.95, 0.825, 0.8
+			setCursor 400, 400
+			drawStringNum %SPEED + %SPEED_VERTICAL
+
+		endif	// showspeed 2
+
+		// default hud powerup code follows up
+		if %POWERUP_QUAD_TIME != 0
+
+			setAlign #CENTER, #MIDDLE
+			setSize 30, 30
+			setCursor 368, 60
+			drawPicByItemIndex #ITEM_QUAD
+
+			setColor 1, 1, 1, 1
+			setAlign #CENTER, #CENTER
+			setCursor 412, 60
+			drawNum %POWERUP_QUAD_TIME
+
+		endif
+
+		if %POWERUP_WARSHELL_TIME != 0
+
+			setAlign #CENTER, #MIDDLE
+			setSize 30, 30
+			setCursor 368, 60
+			if %POWERUP_QUAD_TIME != 0
+				setCursor 368, 90
+			endif
+			drawPicByItemIndex #ITEM_WARSHELL
+
+			setColor 1, 1, 1, 1
+			setAlign #CENTER, #CENTER
+			setCursor 412, 60
+			if %POWERUP_QUAD_TIME != 0
+				setCursor 412, 90
+			endif
+			drawNum %POWERUP_WARSHELL_TIME
+
+		endif
+
+	endif		// !spec
+endif			// race					
+
+// copied of 0.5 times.hud, new gametypes may use these new race timers
+if %TIME_ALPHA != #NOTSET
+	setFont "virtue_16"
+	setColor 0, 0, 0, 1
+	setAlign #RIGHT, #BOTTOM
+	setCursor 786, 392
+	drawString "Alpha Time:"
+
+	setColor 0.8, 0.8, 0.8, 1
+	setAlign #RIGHT, #BOTTOM
+	setCursor 784, 390
+	drawString "Alpha Time:"
+
+	// current time (+shadow)
+	setFont "virtue_16"
+	setColor 0, 0, 0, 1
+	setAlign #RIGHT, #BOTTOM
+	setCursor 786, 408
+	drawTimer %TIME_ALPHA
+
+	setColor 1, 1, 1, 1
+	setAlign #RIGHT, #BOTTOM
+	setCursor 784, 406
+	drawTimer %TIME_ALPHA
+endif
+
+if %TIME_BETA != #NOTSET
+	setFont "virtue_16"
+	setColor 0, 0, 0, 1
+	setAlign #RIGHT, #BOTTOM
+	setCursor 786, 444
+	drawString "Beta Time:"
+
+	setColor 0.8, 0.8, 0.8, 1
+	setAlign #RIGHT, #BOTTOM
+	setCursor 784, 442
+	drawString "Beta Time:"
+
+	// current time (+shadow)
+	setFont "virtue_16"
+	setColor 0, 0, 0, 1
+	setAlign #RIGHT, #BOTTOM
+	setCursor 786, 460
+	drawTimer %TIME_ALPHA
+
+	setColor 1, 1, 1, 1
+	setAlign #RIGHT, #BOTTOM
+	setCursor 784, 468
+	drawTimer %TIME_ALPHA
+endif

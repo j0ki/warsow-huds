@@ -1,0 +1,53 @@
+// weaponcolored crosshair-dot addon, instagun uses teamcolor
+if %TEAM != #TEAM_SPECTATOR						// dont show while freeflying
+	if %HEALTH > 0												// show only if alive
+		
+		setAlign #CENTER, #MIDDLE
+		setCursor #WIDTH / 2, #HEIGHT / 2
+		setSize #WIDTH / 246, #HEIGHT / 185
+		
+		// make the dot a bit smaller for higher resolutions
+		if %VIDHEIGHT > 864
+			setSize #WIDTH / 256, #HEIGHT / 198
+		endif
+		
+		// set dot color to weapons coloring
+		if %WEAPON_ITEM == #ITEM_GUNBLADE
+			setColor 0.8, 0.8, 0.8, 1
+		endif
+		if %WEAPON_ITEM == #ITEM_RIOTGUN
+			setColor 0.8, 0.5, 0, 1
+		endif
+		if %WEAPON_ITEM == #ITEM_GRENADE_LAUNCHER
+			setColor 0.1, 0.2, 1, 1
+		endif
+		if %WEAPON_ITEM == #ITEM_ROCKET_LAUNCHER
+			setColor 1, 0, 0, 1
+		endif
+		if %WEAPON_ITEM == #ITEM_PLASMAGUN
+			setColor 0, 1, 0, 1
+		endif
+		if %WEAPON_ITEM == #ITEM_LASERGUN
+			setColor 1, 0.9, 0.2, 1
+		endif
+		if %WEAPON_ITEM == #ITEM_ELECTROBOLT
+			setColor 0, 1, 1, 1
+		endif
+		if %WEAPON_ITEM == #ITEM_MACHINEGUN
+			setColor 1, 0, 1, 1
+		endif
+		if %WEAPON_ITEM == #ITEM_INSTAGUN
+			setColor 1, 0.8, 0.5, 1								// color for NON TEAM games
+			
+			// special case: makes instaguns dot color adjustable by setting/forcing teamcolors
+			if %TEAMBASED										// %TEAMBASED includes duel
+				setColorToTeamColor %TEAM				// set dotcolor to teamcolor for instagib teamgames (including iduel,ica)
+			endif
+
+		endif
+
+		// draws the actual dot image at the center using the colour set above
+		drawPicByName "gfx/hud/kuhjoe/xdot"
+	
+	endif
+endif

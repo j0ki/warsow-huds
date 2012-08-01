@@ -1,0 +1,31 @@
+// draws pickuped up item string on popup image
+if %SHOW_PICKUP > 0
+	if %PICKUP_ITEM
+
+		// background image
+		setAlign #CENTER, #MIDDLE
+		setSize 240, 30
+		setColor 1, 0.95, 0.825, 0.9
+		setCursor 140, #HEIGHT - 8
+		drawPicByName "gfx/hud/kuhjoe/pickup"
+
+		// fontscaling
+		setCursor 134, #HEIGHT - 9
+		setFont "virtue_22"
+		if %VIDWIDTH < 1440
+			setCursor 136, #HEIGHT - 8
+			setFont "virtue_16"
+			if %VIDWIDTH < 1024
+				setFont "virtue_12"		// 800x600 like
+				if %VIDWIDTH < 800
+					setFont "virtue_10"		// 640x or even less
+				endif
+			endif
+		endif
+		
+		// item name
+		setColor 0, 0, 0, 0.66
+		drawItemName %PICKUP_ITEM
+
+	endif
+endif

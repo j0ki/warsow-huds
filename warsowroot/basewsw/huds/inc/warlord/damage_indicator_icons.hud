@@ -1,0 +1,46 @@
+// damage given / damage taken icon hints
+// (FIXME, %DAMAGE_GIVEN has bug: when also getting a kill, damage given is zero but should be one)
+
+precache gfx/hud/kuhjoe/damage_recieved_on
+precache gfx/hud/kuhjoe/damage_given_on
+
+// dont show them for insta games
+if %INSTAGIB == 0
+
+	setAlign #TOP, #LEFT
+	// vertical icon stack, case: damage taken and optionally damage given
+	if %DAMAGE_INDICATOR_LEFT && %DAMAGE_INDICATOR_RIGHT && %DAMAGE_INDICATOR_TOP && %DAMAGE_INDICATOR_BOTTOM > 0
+
+		setSize 34, 34
+		setColor 1, 0.98, 0.936, 0.9
+		setCursor 756, 540
+		// keypress graphics might eat our space, adjust
+		if %SHOW_PRESSED_KEYS != 0
+			setCursor 756, 460
+		endif
+
+		// you are also stunned move icon upwards
+		if %STUNNED > 0
+			setCursor 756, 500
+			// keypress graphics might eat our space, adjust
+			if %SHOW_PRESSED_KEYS != 0
+				setCursor 756, 420
+			endif
+		endif
+		drawPicByName "gfx/hud/kuhjoe/damage_recieved_on"
+
+	endif
+	
+	// vertical icon stack, case: no damage taken but stunned
+	if %STUNNED > 0
+		setSize 34, 34
+		setColor 1, 0.98, 0.936, 0.9
+		setCursor 756, 540
+		// keypresses graphics might eat our space, adjust
+		if %SHOW_PRESSED_KEYS != 0
+			setCursor 756, 460
+		endif
+		drawPicByName "gfx/hud/kuhjoe/stunned_icon"
+	endif
+
+endif	// !insta

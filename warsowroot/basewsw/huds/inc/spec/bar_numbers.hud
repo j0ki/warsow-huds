@@ -1,0 +1,70 @@
+/* Draw as many images as possible */
+setAlign 2 2
+setCursor 94, #HEIGHT - 35
+setSize 148 44
+setColor 1 1 1 1
+//drawPicByName "gfx/hud/spec/hp_bg"
+if %HEALTH <= 0
+drawPicByName "gfx/hud/spec/numbers_bg_red"
+endif
+
+moveCursor 140 0
+if %ARMOR <= 0
+drawPicByName "gfx/hud/spec/numbers_bg_red"
+endif
+
+moveCursor 140 0
+if 0 == %AMMO
+drawPicByName "gfx/hud/spec/numbers_bg_red"
+endif
+
+
+moveCursor -280 0
+setSize 40 40
+if %RACE == 0
+	if %HEALTH != #NOTSET
+		//colors
+		setcolor 1 1 1 1
+		if %HEALTH > 100
+			setcolor 1 0 1 1
+		endif
+		if %HEALTH == 100
+			setcolor 0 0.6 1 1
+		endif
+		if %HEALTH < 75
+			setcolor 1 0.5 0 1
+		endif
+		if %HEALTH < 50
+			setcolor 0.85 0.05 0.05 1
+		endif
+		setColorAlpha 0.65
+		drawNum %HEALTH
+	endif //if %HEALTH != #NOTSET
+	moveCursor 140 0
+	if %ARMOR != #NOTSET
+	if %ARMOR > 0
+		//colors
+		setcolor 1 1 1 1
+		if %ARMOR >= 50
+			setcolor 0.2 0.6 0.2 1
+		endif
+		if %ARMOR >= 95
+			setcolor 0.8 0.7 0 1
+		endif
+		if %ARMOR >= 125
+			setcolor 0.85 0.05 0.05 1
+		endif
+		setColorAlpha 0.65
+		drawNum %ARMOR
+	endif //if %ARMOR > 0
+	endif //if %ARMOR != #NOTSET
+	moveCursor 140 0
+	if 0 < %AMMO
+		setColor 1 1 1 1
+		setColorAlpha 0.65
+		drawNum %AMMO
+	endif
+	if 0 == %AMMO
+		drawPicByName gfx/hud/icons/vsay/no
+	endif
+endif //if %RACE == 0

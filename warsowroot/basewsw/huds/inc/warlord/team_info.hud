@@ -1,0 +1,166 @@
+/*
+gametype specific images and progression hints, copied off warsow 0.5 default.hud
+ 
+- NONINSTA games: draws %PROGRESS_SELF and %PROGRESS_OTHER combined pie inside weapon orb (weapon_orb.hud)
+- INSTAGIBBING: draws %PROGRESS_SELF and %PROGRESS_OTHER combined pie over fancy logo (weapon_orb.hud)
+- shows %IMAGE_SELF left and %IMAGE_OTHER next to clock (flagstate, powerups)
+*/
+
+setAlign #CENTER, #MIDDLE
+drawTeamMates	
+
+setAlign #LEFT, #BOTTOM
+setCursor 1, #HEIGHT - 42
+setColor 1, 1, 1, 1
+
+// fontscaling
+setFont "bitstream_8"
+if %VIDWIDTH > 960
+	setFont "virtue_10"
+	if %VIDWIDTH >= 1280
+		setFont "virtue_12"
+		if %VIDWIDTH >= 1600
+			setFont "virtue_16"
+		endif
+	endif
+endif
+drawTeamInfo
+
+// self status pic (Quad, flag carrier), center, lower side of screen
+if %IMAGE_SELF
+	setColorToTeamColor %TEAM
+	setCursor 305, 63
+	setSize 42, 42
+	setAlign #CENTER, #MIDDLE
+	drawPicByIndex %IMAGE_SELF
+endif
+
+// enemy's info. Right side of screen
+if %IMAGE_OTHER
+	setColorToTeamColor %TEAM_ENEMY
+	setCursor 495, 63
+	setSize 42, 42
+	setAlign #CENTER, #MIDDLE
+	drawPicByIndex %IMAGE_OTHER
+endif
+
+if %IMAGE_ALPHA
+	setColorToTeamColor #TEAM_ALPHA
+	setCursor 230, 63
+	setSize 42, 42
+	setAlign #CENTER, #MIDDLE
+	drawPicByIndex %IMAGE_ALPHA
+endif
+
+if %IMAGE_BETA
+	setColorToTeamColor #TEAM_BETA
+	setCursor 570, 63
+	setSize 42, 42
+	setAlign #CENTER, #MIDDLE
+	drawPicByIndex %IMAGE_BETA
+endif
+
+//=======================================================
+// team progress stats are used to indicate the state 
+// of team actions in gametypes, as flag unlocks in ctf
+//=======================================================
+
+// this stuff should be drawn before weapon_icon.hud and powerups.hud because its intended to be under that things
+setAlign #CENTER, #MIDDLE
+setSize 99, 99
+setCursor 400, 554
+
+// instagib position and scaling adjustment (see weapon_orb.hud)
+if %INSTAGIB != 0
+	setCursor 332, 568
+	setSize 51, 51
+endif
+
+if %PROGRESS_SELF
+
+	// we draw positive value tarts in green color and negative value tarts in red
+	if %PROGRESS_SELF < 0
+		setColor 1, 0, 0, 0.7
+		drawPicVar %PROGRESS_SELF, -1, -100, 1, 33, "gfx/hud/kuhjoe/ctf_pie/tortenschlacht_##"
+	endif
+
+	if %PROGRESS_SELF > 0
+		setColor 0, 1, 0, 0.7
+		drawPicVar %PROGRESS_SELF, 1, 100, 1, 33, "gfx/hud/kuhjoe/ctf_pie/tortenschlacht_##"
+	endif
+
+endif 
+
+if %PROGRESS_OTHER
+
+	// we draw positive value tarts in green color and negative value tarts in red
+	if %PROGRESS_OTHER < 0
+		setColor 1, 0, 0, 0.7
+		drawPicVar %PROGRESS_OTHER, -1, -100, 1, 33, "gfx/hud/kuhjoe/ctf_pie/tortenschlacht_##"
+	endif
+
+	if %PROGRESS_OTHER > 0
+		setColor 0, 1, 0, 0.7
+		drawPicVar %PROGRESS_OTHER, 1, 100, 1, 33, "gfx/hud/kuhjoe/ctf_pie/tortenschlacht_##"
+	endif
+
+endif
+
+if %TEAM != #TEAM_SPECTATOR		// FIXME - temp workaround for specbug in ctf
+	// gametype specific progress references
+	if %PROGRESS_ALPHA
+
+	setCursor 200, 63
+	setSize 42, 42
+
+		// we draw positive value tarts in team color and negative value tarts in enemy color
+		if %PROGRESS_ALPHA < 0
+			setColorToTeamColor #TEAM_BETA
+			drawPicVar %PROGRESS_ALPHA, -1, -100, 1, 33, "gfx/hud/kuhjoe/ctf_pie/tortenschlacht_##"
+		endif
+
+		if %PROGRESS_ALPHA > 0
+			setColorToTeamColor #TEAM_ALPHA
+			drawPicVar %PROGRESS_ALPHA, 1, 100, 1, 33, "gfx/hud/kuhjoe/ctf_pie/tortenschlacht_##"
+		endif
+
+		// eye candy layer
+		setSize 54, 54
+		setColor 1, 0.95, 0.825, 0.4
+		if %VIDHEIGHT <= 600
+			drawPicByName "gfx/hud/kuhjoe/middle_toyish_lowres"
+		endif			
+		if %VIDHEIGHT > 600
+			drawPicByName "gfx/hud/kuhjoe/middle_toyish"
+		endif
+
+	endif
+
+	if %PROGRESS_BETA
+
+	setCursor 600, 63
+	setSize 42, 42
+
+		// we draw positive value tarts in team color and negative value tarts in enemy color
+		if %PROGRESS_BETA < 0
+			setColorToTeamColor #TEAM_ALPHA
+			drawPicVar %PROGRESS_BETA, -1, -100, 1, 33, "gfx/hud/kuhjoe/ctf_pie/tortenschlacht_##"
+		endif
+
+		if %PROGRESS_BETA > 0
+			setColorToTeamColor #TEAM_BETA
+			drawPicVar %PROGRESS_BETA, 1, 100, 1, 33, "gfx/hud/kuhjoe/ctf_pie/tortenschlacht_##"
+		endif
+
+		// eye candy layer
+		setSize 54, 54
+		setColor 1, 0.95, 0.825, 0.4
+		if %VIDHEIGHT <= 600
+			drawPicByName "gfx/hud/kuhjoe/middle_toyish_lowres"
+		endif			
+		if %VIDHEIGHT > 600
+			drawPicByName "gfx/hud/kuhjoe/middle_toyish"
+		endif
+
+	endif
+endif 	// !spec
