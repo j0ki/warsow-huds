@@ -36,11 +36,11 @@ if %STRAFEANGLE > 0
 	//move cursor in position and draw arrows
 	moveCursor 0.03 * %DIFF_ANGLE + %STRAFEANGLE , 0
 	setAlign #LEFT, #BOTTOM
-	drawPicByName gfx/hud/racesow/strafearrow_right
+	drawPicByName gfx/hud/rs-base/strafearrow_right
 
 	moveCursor -0.06 * %STRAFEANGLE , 0
 	setAlign #RIGHT, #BOTTOM
-	drawPicByName gfx/hud/racesow/strafearrow_left
+	drawPicByName gfx/hud/rs-base/strafearrow_left
 
 	//move Cursor back to the middle
 	moveCursor -0.03 * %STRAFEANGLE + %DIFF_ANGLE, 0

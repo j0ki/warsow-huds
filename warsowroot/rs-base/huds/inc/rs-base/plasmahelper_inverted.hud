@@ -44,12 +44,12 @@ endif
 setAlign #LEFT, #TOP
 // zoomfactor
 setSize 10, 3.6 / 0.1
-drawPicByName gfx/hud/joki/plasmaarrow_down
+drawPicByName gfx/hud/rs-base/plasmaarrow_down
 
 setAlign #LEFT, #BOTTOM
 // zoomfactor
 setSize 10, 6.1 / 0.1
-drawPicByName gfx/hud/joki/plasmaarrow_up
+drawPicByName gfx/hud/rs-base/plasmaarrow_up
 
 //draw "crosshair"
 moveCursor 0, 0.1 * %MOUSE_Y - 7150

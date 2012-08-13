@@ -44,12 +44,12 @@ endif
 setAlign #LEFT, #TOP
 // zoomfactor
 setSize 10, 0.2 * 100 * 6.1
-drawPicByName gfx/hud/racesow/plasmaarrow_down
+drawPicByName gfx/hud/rs-base/plasmaarrow_down
 
 setAlign #LEFT, #BOTTOM
 // zoomfactor
 setSize 10, 0.2 * 100 * 3.6
-drawPicByName gfx/hud/racesow/plasmaarrow_up
+drawPicByName gfx/hud/rs-base/plasmaarrow_up
 
 //draw "crosshair"
 //zoomfactor
