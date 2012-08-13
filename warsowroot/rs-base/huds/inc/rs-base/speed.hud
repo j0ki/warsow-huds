@@ -1,0 +1,50 @@
+//speed meter
+
+setScale #DEFAULTSCALE
+setCursor 400, 300
+setScale #NOSCALE
+moveCursor 0, 50
+setColor 1, 1, 1, 1
+
+if 1 & %SHOW_SPEED
+
+	//description
+	if 0 == 4 & %SHOW_SPEED
+		//horizontal bar
+		setAlign #CENTER, #MIDDLE
+		setSize 70, 2
+		drawPicByName gfx/ui/white
+	
+		setFont "bitstream_7"
+		setAlign #CENTER, #BOTTOM
+		drawString "speed"
+	endif
+
+	moveCursor 0, 15
+	setAlign #CENTER, #MIDDLE
+	setFont "virtue_22"
+	setColor 0, 0, 0, 1
+	drawStringNum %SPEED
+	moveCursor 0, 4
+	drawStringNum %SPEED
+	moveCursor 4, -4
+	drawStringNum %SPEED
+	moveCursor 0, 4
+	drawStringNum %SPEED
+	//white number
+	moveCursor -2, -2
+	setColor 1, 1, 1, 1
+	drawStringNum %SPEED
+
+endif
+
+//old speed number
+if 2 & %SHOW_SPEED
+if 0 == 1 & %SHOW_SPEED
+	setFont "virtue_12"
+	setAlign #CENTER, #MIDDLE
+	drawStringNum %SPEED
+endif
+endif
+
+

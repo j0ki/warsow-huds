@@ -1,0 +1,73 @@
+//
+// Scripting by learn_more
+// Hud placement, ideas and hud coginf reed aka cG aka gumka :)
+// This hud supports all race .hud features.
+
+// This HUD uses others
+// - cryzis2 (health/armor/ammo)
+// - warsow hud (basewsw)
+
+//settings for cg_showspeed:
+//0 - disable speed/angle view
+//1 - new speed/angle view
+//2 - old speed/angle view
+//3 - new speed/angle view without angle
+//
+//bitmask for cg_showspeed:
+//4 - disable speed/angle description
+//64 - enable plasmahelper
+
+//bitmask for cg_showtimer:
+//1 - enable Match Time
+//2 - disable Race Time
+//4 - disable Records
+//8 - disable 10 seconds countdown
+
+setFont con_fontSystemsmall
+
+setScale #DEFAULTSCALE
+
+//from default
+include default/damage_indicator_screen
+include default/crosshair
+include default/health_armor
+include default/weaponlist
+include default/ammo
+include default/scores
+include default/ammo_warning
+include default/stunned
+include default/obituaries
+include default/powerups
+include default/team_info
+include default/team_image
+include default/team_message
+include default/team_progress
+include default/minimap
+include default/item_timers
+
+include default/chasing
+include default/awards
+include default/download
+include default/net
+include default/pointing
+
+
+include rs-base/times
+include rs-base/fps
+include rs-base/clock
+include rs-base/speed
+include rs-base/keystate // still stretched in default
+
+include rs-base/angles
+//include rs-base/checkpoints // deactivated, because warsow is missing functions for these
+//include rs-base/acceleration // deactivated, because warsow is missing functions for these
+include rs-base/dotstrafer
+
+include rs-base/chat // dunno if this needs to be adjusted, i dont want to mess with the positioning
+
+include rs-base/plasmahelper
+
+//workaround for changing to older huds
+setScale #DEFAULTSCALE
+
+
